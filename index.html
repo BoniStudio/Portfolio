@@ -3,51 +3,347 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ace | Portfolio</title>
+  <title>Ace | AI Builder & VR Creator</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0b0b0b;
+      background: #050505;
       color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #7CFF6B;
+      text-decoration: none;
+    }
+
+    a:hover {
+      opacity: 0.85;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(5, 5, 5, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #1a1a1a;
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .hero {
+      min-height: 88vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
       text-align: center;
-      padding: 24px;
+      padding: 80px 0 40px;
     }
-    .card {
-      max-width: 720px;
+
+    .hero h1 {
+      font-size: 64px;
+      margin: 0 0 16px;
+      line-height: 1.05;
     }
-    h1 {
-      font-size: 48px;
-      margin-bottom: 12px;
-    }
-    p {
-      font-size: 20px;
-      line-height: 1.6;
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 28px;
+      font-size: 22px;
       color: #cfcfcf;
     }
-    .links {
-      margin-top: 24px;
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    a {
-      color: #7cf57c;
-      text-decoration: none;
-      margin: 0 12px;
-      font-size: 18px;
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid #2a2a2a;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #7CFF6B;
+      color: #000;
+      border-color: #7CFF6B;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+    }
+
+    section {
+      padding: 72px 0;
+      border-top: 1px solid #151515;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin: 0 0 18px;
+    }
+
+    .section-desc {
+      color: #bcbcbc;
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #0b0b0b;
+      border: 1px solid #1f1f1f;
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #c7c7c7;
+      margin-bottom: 16px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      font-size: 13px;
+      color: #9be98f;
+      border: 1px solid #21451c;
+      background: #0d160d;
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    .contact-box {
+      text-align: center;
+      padding: 36px;
+      background: #0b0b0b;
+      border: 1px solid #1f1f1f;
+      border-radius: 20px;
+    }
+
+    .contact-box p {
+      color: #cfcfcf;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    footer {
+      padding: 28px 0 44px;
+      color: #8a8a8a;
+      text-align: center;
+      border-top: 1px solid #151515;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .nav {
+        flex-direction: column;
+        gap: 12px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Ace</h1>
-    <p>I build AI-driven products, automation systems, and future-facing VR experiences.</p>
-    <div class="links">
-      <a href="https://github.com/">GitHub</a>
-      <a href="mailto:your@email.com">Email</a>
+  <header>
+    <div class="container nav">
+      <div class="brand">Ace</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>I build AI products, automation systems, and VR experiences.</h1>
+        <p>
+          Founder-minded builder focused on shipping useful software fast.
+          I work across AI tools, product MVPs, workflow automation, and immersive interactive projects.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#contact">Work with me</a>
+          <a class="btn btn-secondary" href="#projects">See projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p class="section-desc">
+          I am Ace, a builder working at the intersection of AI, automation, and VR.
+          I care about speed, leverage, and creating products that people actually use.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>What I do</h3>
+            <p>Build MVPs, automation tools, product websites, internal tools, and interactive app experiences.</p>
+          </div>
+          <div class="card">
+            <h3>How I work</h3>
+            <p>Fast iteration, clear scope, direct communication, and a bias toward shipping instead of overplanning.</p>
+          </div>
+          <div class="card">
+            <h3>Focus</h3>
+            <p>AI-powered products, user-facing apps, workflow systems, creative tech, and long-term VR projects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="section-desc">
+          Replace these with your real project links later. Right now the goal is to look credible and clear.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>OvO</h3>
+            <p>A cyber beads platform for creating, gifting, and collecting digital works with identity and provenance.</p>
+            <div class="tag-row">
+              <span class="tag">iOS</span>
+              <span class="tag">SwiftUI</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Product Design</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Automation Tools</h3>
+            <p>Lead generation and workflow tools designed to reduce manual effort and create repeatable business systems.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Growth</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>VR Game R&D</h3>
+            <p>Long-term work on immersive VR experiences focused on atmosphere, exploration, and creative interaction.</p>
+            <div class="tag-row">
+              <span class="tag">Unreal Engine 5</span>
+              <span class="tag">VR</span>
+              <span class="tag">Game Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="section-desc">
+          This section turns the site from a personal page into a conversion page.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>MVP Development</h3>
+            <p>Rapid prototype or first-version product build for startups, founders, and creators.</p>
+          </div>
+          <div class="card">
+            <h3>Automation Systems</h3>
+            <p>Custom tools for lead generation, workflow automation, scraping, and repetitive task reduction.</p>
+          </div>
+          <div class="card">
+            <h3>Product Landing Pages</h3>
+            <p>Fast, clean sites that explain your product clearly and help convert visitors into users or clients.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-box">
+          <p>
+            Open to selected freelance work, product collaborations, and AI or automation projects.
+          </p>
+          <p>
+            Email: <a href="mailto:your@email.com">your@email.com</a><br />
+            GitHub: <a href="https://github.com/BoniStudio" target="_blank">github.com/BoniStudio</a>
+          </p>
+          <a class="btn btn-primary" href="mailto:your@email.com">Email me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Ace. Built with GitHub Pages.
+    </div>
+  </footer>
 </body>
 </html>
