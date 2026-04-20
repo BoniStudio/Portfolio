@@ -8,23 +8,28 @@ window.TRANSLATIONS = {
     "page.home.title": "Ace Chen — Games, Products, and Digital Systems",
     "page.home.desc": "Ace Chen — founder-minded builder. Games first, products second, AI as leverage. Building OvO, original game worlds under BoniStudio, and AI-assisted systems.",
     "page.work.title": "Work — Ace Chen",
-    "page.work.desc": "Selected projects, experience, capabilities, and current work — Ace Chen / BoniStudio.",
+    "page.work.desc": "Selected projects, experience, and capabilities by Ace Chen — founder building games, products, and AI-assisted systems under BoniStudio.",
 
     /* ---------- Nav (shared) ---------- */
+    "brand.role": "Founder, BoniStudio",
+
     "nav.home": "Home",
     "nav.work": "Work",
     "nav.about": "About",
     "nav.experience": "Experience",
     "nav.contact": "Contact",
     "nav.cta.viewwork": "View Work",
-    "nav.cta.contact": "Get in touch",
+    "nav.cta.contact": "Contact Ace",
 
     /* ---------- Home · Hero ---------- */
     "hero.meta.live": "Live / 2026",
     "hero.meta.location": "Seattle × Global",
     "hero.meta.status": "Independent",
+    "hero.identity.name": "Ace Chen",
+    "hero.identity.role": "Founder, BoniStudio",
+    "hero.identity.note": "Building under BoniStudio",
     "hero.title.html": '<span class="line">Building <em>games</em>,</span><span class="line">products, and digital</span><span class="line line--muted">systems that actually ship.</span>',
-    "hero.subtitle": "Founder-minded builder focused on original game worlds, product systems that generate real traction, and AI used as leverage — not as identity.",
+    "hero.subtitle": "Ace Chen — a founder-minded builder focused on original game worlds, product systems that generate real traction, and AI used as leverage, not as identity. BoniStudio is the long-term container for the creative work.",
     "hero.pillar.games": "Games first",
     "hero.pillar.products": "Products second",
     "hero.pillar.ai": "AI as amplifier",
@@ -41,7 +46,7 @@ window.TRANSLATIONS = {
     "narrative.01.sub": "Not slideware. Not prototypes that die in Figma. Real systems, real players, real users — running in production.",
     "narrative.02.num": "02 / Stack",
     "narrative.02.title.html": "<em>Games</em> are the core. Products fund the path.",
-    "narrative.02.sub": "Original game worlds are the long-term creative spine. Shipped products pay for the engine room: tools, talent, and time to go deeper.",
+    "narrative.02.sub": "Original game worlds are the long-term creative spine — built under BoniStudio. Shipped products pay for the engine room: tools, talent, and time to go deeper.",
     "narrative.03.num": "03 / Leverage",
     "narrative.03.title.html": "AI is <em>leverage</em>, not identity.",
     "narrative.03.sub": "I use models to accelerate, not to pretend. Architecture, debugging, evaluation, iteration — AI is the multiplier stacked on top of engineering judgment.",
@@ -55,45 +60,45 @@ window.TRANSLATIONS = {
     "pillars.sub": "Each pillar supports the next. Games set the creative ceiling. Products create the runway. AI compresses the distance between ideas and shipped reality.",
     "pillars.games.idx": "01 / Games",
     "pillars.games.title": "Games",
-    "pillars.games.desc": "Long-term original game worlds under BoniStudio. Atmosphere, systems, mechanics, and IP designed to last beyond a single release cycle.",
+    "pillars.games.desc": "Where the long arc lives. Original game worlds developed under BoniStudio — atmosphere, systems, mechanics, and IP designed to outlast any single release.",
     "pillars.games.meta": "Creative spine",
     "pillars.products.idx": "02 / Products",
     "pillars.products.title": "Products",
-    "pillars.products.desc": "iOS apps and digital tools engineered to ship, reach users, and become recurring cash-flow assets. OvO is the first. More are already in motion.",
+    "pillars.products.desc": "Where the current leverage is. iOS apps and digital tools I ship to reach real users and build recurring cash-flow assets. OvO is the first.",
     "pillars.products.meta": "Runway engine",
     "pillars.ai.idx": "03 / AI Leverage",
     "pillars.ai.title": "AI Leverage",
-    "pillars.ai.desc": "AI applied as an engineering multiplier: architecture, debugging, evaluation, iteration. Output quality, not prompt theatre.",
+    "pillars.ai.desc": "Where the speed comes from. AI used as an engineering multiplier across architecture, debugging, evaluation, and iteration — output quality, not prompt theatre.",
     "pillars.ai.meta": "Multiplier layer",
 
     /* ---------- Home · Signals ---------- */
     "signals.eyebrow": "Selected Signals",
     "signals.title": "Proof, not promises.",
-    "signals.sub.html": 'A handful of concrete signals. The full case studies live on <a href="work.html" style="color:var(--accent);">/work</a>.',
+    "signals.sub.html": 'A handful of concrete signals I\'ve already put out. The full case studies live on <a href="work.html" style="color:var(--accent);">/work</a>.',
     "signals.1.k": "Shipped",
-    "signals.1.v": "OvO launched on iOS — built in SwiftUI with a Firebase backend.",
+    "signals.1.v": "I launched OvO on iOS — SwiftUI frontend, Firebase backend, designed and built solo.",
     "signals.1.note": "Product ownership, end to end.",
     "signals.2.k": "In motion",
-    "signals.2.v": "Original game direction under BoniStudio.",
+    "signals.2.v": "I'm building a long-term game direction under BoniStudio.",
     "signals.2.note": "Long-horizon creative IP.",
     "signals.3.k": "Engineering",
-    "signals.3.v": "Production full-stack feature work across real teams.",
+    "signals.3.v": "I've shipped full-stack features inside real production teams.",
     "signals.3.note": "Not a side-project résumé.",
     "signals.4.k": "AI Practice",
-    "signals.4.v": "Evaluated AI-generated code and wrote developer-grade prompts for debugging, architecture, and edge cases.",
+    "signals.4.v": "I evaluate AI-generated code and write developer-grade prompts for debugging, architecture, and edge cases.",
     "signals.4.note": "Leverage, not decoration.",
 
     /* ---------- Home · Founder ---------- */
     "founder.eyebrow": "Founder Statement",
-    "founder.quote.html": "I'm not building for noise.<br/>I'm building for <em>permanence</em>.<br/>Games, systems, and products that prove I was here.",
-    "founder.sign": "Ace Chen — Founder, BoniStudio",
+    "founder.quote.html": "I'm not building for noise.<br/>I'm building for <em>permanence</em>.<br/>Games, systems, and products that prove I was here — the beginning of a larger body of work.",
+    "founder.sign": "Ace Chen — Founder, BoniStudio · Built by a person, not a committee.",
 
     /* ---------- Home · CTA ---------- */
     "cta.eyebrow": "Open for",
     "cta.title": "Backers. Collaborators. People who ship.",
     "cta.actions.viewwork": "View Work",
     "cta.actions.sponsor": "Sponsor the Journey",
-    "cta.actions.email": "Email me",
+    "cta.actions.email": "Email Ace",
     "cta.side.label": "Channels",
     "cta.side.email.primary": "Primary",
     "cta.side.email.alternate": "Alternate",
@@ -103,16 +108,16 @@ window.TRANSLATIONS = {
     "cta.side.proof.text": "/work — case studies",
 
     /* ---------- Footer (home) ---------- */
-    "footer.home.copy": "© {year} Ace Chen / BoniStudio. Built in the open.",
+    "footer.home.copy": "© {year} Ace Chen — founder, builder, creator. Built under BoniStudio.",
     "footer.work": "Work",
     "footer.home": "Home",
     "footer.contact": "Contact",
     "footer.top": "Top ↑",
 
     /* ---------- Work · Hero ---------- */
-    "work.hero.eyebrow": "/ Work — Selected",
-    "work.hero.title.html": "Real products across <em>games</em>, iOS apps, full-stack systems, and AI-assisted workflows.",
-    "work.hero.lead": "Seattle-based founder-minded builder with a CS background. A bias toward shipping real things over polishing ideas forever — and a preference for systems that compound.",
+    "work.hero.eyebrow": "/ Selected Work",
+    "work.hero.title.html": "Selected work by <em>Ace Chen</em> across games, products, and AI-assisted systems.",
+    "work.hero.lead": "A founder portfolio spanning long-term game direction under BoniStudio, shipped iOS products, and AI-assisted engineering. A bias toward shipping real things over polishing ideas forever — and a preference for systems that compound.",
     "work.hero.meta.role.k": "Role",
     "work.hero.meta.role.v": "Founder / Builder",
     "work.hero.meta.studio.k": "Studio",
@@ -125,7 +130,7 @@ window.TRANSLATIONS = {
     /* ---------- Work · Projects header ---------- */
     "projects.eyebrow": "Featured Projects",
     "projects.title.html": 'What I\'ve shipped,<br/><span class="gradient-text">and what I\'m building next.</span>',
-    "projects.sub": "Ordered by current priority. The game direction is the long arc. The products are the engine. AI is baked into every layer.",
+    "projects.sub": "Ordered by current priority. Games are the long arc, under BoniStudio. Products are the engine. AI is baked into every layer.",
 
     /* OvO */
     "project.ovo.status": "Live on iOS",
@@ -133,13 +138,13 @@ window.TRANSLATIONS = {
     "project.ovo.row.a": "01 / Product",
     "project.ovo.row.b": "2024 — present",
     "project.ovo.title": "OvO — Digital bead art, gifted.",
-    "project.ovo.summary": "A digital bead-art gifting platform for iOS. Players design, mint, and gift generative bead works inside a real-time app. Built from the first commit to the App Store.",
+    "project.ovo.summary": "A digital bead-art gifting platform for iOS — designed, built, and shipped by me. Players create, mint, and gift generative bead works inside a real-time app, from the first commit to the App Store.",
     "project.ovo.built.h": "What I built",
     "project.ovo.built.1": "SwiftUI frontend with custom editor & canvas flow",
     "project.ovo.built.2": "Firebase auth, Firestore, storage, real-time sync",
     "project.ovo.built.3": "Minting, gifting, and product iteration logic",
     "project.ovo.why.h": "Why it matters",
-    "project.ovo.why.p": "Proof of shipping ability, systems thinking, and long-term brand potential — an app actually running in users' hands, not a mockup.",
+    "project.ovo.why.p": "My first fully-shipped founder product. Proof of end-to-end ownership, systems thinking, and long-term brand potential — an app actually running in users' hands, not a mockup.",
     "project.stack.h": "Stack",
 
     /* Game */
@@ -147,14 +152,14 @@ window.TRANSLATIONS = {
     "project.game.tag": "Long Arc",
     "project.game.row.a": "02 / Game",
     "project.game.row.b": "Ongoing",
-    "project.game.title": "BoniStudio — Original game direction.",
-    "project.game.summary": "Long-horizon original game development under BoniStudio. A creative spine for everything else: original worlds, original mechanics, and the interactive systems I actually want to exist.",
+    "project.game.title": "Game direction — under BoniStudio.",
+    "project.game.summary": "BoniStudio is the long-horizon container for my original game work. Original worlds, original mechanics, and the interactive systems I actually want to exist — developed quietly, with full creative ownership.",
     "project.game.focus.h": "Focus",
     "project.game.focus.1": "UE5 prototyping & interactive systems",
     "project.game.focus.2": "Worldbuilding direction and tone",
     "project.game.focus.3": "Mechanics, atmosphere, experimental loops",
     "project.game.why.h": "Why it matters",
-    "project.game.why.p": "This is the long-term creative direction of the studio — the part that doesn't show up in a quarter, but defines what the rest of the decade looks like.",
+    "project.game.why.p": "BoniStudio is where the long arc of my creative work compounds. The part that doesn't show up in a quarter, but defines what the rest of the decade looks like.",
 
     /* AI */
     "project.ai.status": "Applied",
@@ -162,7 +167,7 @@ window.TRANSLATIONS = {
     "project.ai.row.a": "03 / Method",
     "project.ai.row.b": "2023 — present",
     "project.ai.title": "AI, Automation & Code Evaluation.",
-    "project.ai.summary": "Treating AI as an engineering multiplier, not a personality. Evaluation of model-generated code for correctness, reasoning quality, and real-world usability — plus developer-grade prompts embedded in real production workflows.",
+    "project.ai.summary": "I treat AI as an engineering multiplier, not a personality. I evaluate model-generated code for correctness, reasoning quality, and real-world usability — and embed developer-grade prompts directly into production workflows.",
     "project.ai.do.h": "What I do",
     "project.ai.do.1": "Evaluate AI-generated code for correctness, reasoning & hallucination risk",
     "project.ai.do.2": "Write developer-style prompts for debugging, architecture & edge cases",
@@ -176,7 +181,7 @@ window.TRANSLATIONS = {
     "project.plur.row.a": "04 / Early founder",
     "project.plur.row.b": "Prior",
     "project.plur.title": "PLUR — Editorial for a music culture.",
-    "project.plur.summary": "An early editorial and content platform built around electronic music culture. A first clear signal of product instinct, internet fluency, and the appetite to actually ship things.",
+    "project.plur.summary": "An early editorial and content platform I built around electronic music culture. A first clear signal of product instinct, internet fluency, and the appetite to actually ship things.",
     "project.plur.built.h": "What I built",
     "project.plur.built.1": "Content and editorial workflow for a live audience",
     "project.plur.built.2": "Basic web infrastructure & publishing pipeline",
@@ -205,8 +210,8 @@ window.TRANSLATIONS = {
 
     /* ---------- Work · Capabilities ---------- */
     "cap.eyebrow": "Capabilities",
-    "cap.title": "Four stacks. One operator.",
-    "cap.sub": "Not a laundry list. These are the four fronts I actively work across — and the tools I use to move quickly on each.",
+    "cap.title": "How I build. What I'm strong at.",
+    "cap.sub": "Not a services menu. Four fronts I actively build across — and the tools I reach for on each.",
     "cap.1.title": "Product Building",
     "cap.1.desc": "End-to-end ownership of the surface users actually see and feel.",
     "cap.2.title": "Full-Stack Development",
@@ -237,7 +242,7 @@ window.TRANSLATIONS = {
     "contact.eyebrow": "Contact",
     "contact.title": "Let's build something that lasts.",
     "contact.lead": "Open to: investment conversations, sponsorship, collaboration, and a small number of selected opportunities. If you've read this far, we should probably talk.",
-    "contact.cta.email": "Email me",
+    "contact.cta.email": "Email Ace",
     "contact.cta.sponsor": "Sponsor the Journey",
     "contact.list.email.primary.label": "Email / Primary",
     "contact.list.email.alternate.label": "Email / Alternate",
@@ -247,7 +252,7 @@ window.TRANSLATIONS = {
     "contact.list.discord.text": "discord — on request",
 
     /* ---------- Footer (work) ---------- */
-    "footer.work.copy": "© {year} Ace Chen / BoniStudio. This is not the end — it's the beginning.",
+    "footer.work.copy": "© {year} Ace Chen. Long-term game and creative work lives under BoniStudio.",
 
     /* ---------- Language toggle ---------- */
     "lang.toggle.aria": "Toggle language"
@@ -262,7 +267,10 @@ window.TRANSLATIONS = {
     "page.home.title": "Ace Chen — 游戏、产品与数字系统",
     "page.home.desc": "Ace Chen — 创始人心态的构建者。游戏优先，产品随后，AI 作为杠杆。正在打造 OvO、BoniStudio 旗下的原创游戏世界，以及 AI 驱动的工程系统。",
     "page.work.title": "作品 — Ace Chen",
-    "page.work.desc": "精选项目、经历、能力与当前进展 — Ace Chen / BoniStudio。",
+    "page.work.desc": "Ace Chen 的精选项目、经历与能力——一个在 BoniStudio 之下持续构建游戏、产品与 AI 驱动系统的创始人。",
+
+    /* Brand */
+    "brand.role": "BoniStudio 创始人",
 
     /* Nav */
     "nav.home": "首页",
@@ -271,14 +279,17 @@ window.TRANSLATIONS = {
     "nav.experience": "经历",
     "nav.contact": "联系",
     "nav.cta.viewwork": "查看作品",
-    "nav.cta.contact": "联系我",
+    "nav.cta.contact": "联系 Ace",
 
     /* Hero */
     "hero.meta.live": "在线 / 2026",
     "hero.meta.location": "西雅图 × 全球",
     "hero.meta.status": "独立",
+    "hero.identity.name": "Ace Chen",
+    "hero.identity.role": "BoniStudio 创始人",
+    "hero.identity.note": "在 BoniStudio 持续构建",
     "hero.title.html": '<span class="line">打造<em>游戏</em>、产品，</span><span class="line">以及真正能上线的</span><span class="line line--muted">数字系统。</span>',
-    "hero.subtitle": "创始人心态的构建者。专注原创游戏世界、能带来真实增长的产品系统，把 AI 当杠杆，而不是身份。",
+    "hero.subtitle": "Ace Chen——创始人心态的构建者。专注原创游戏世界、能带来真实增长的产品系统，把 AI 当杠杆而不是身份。BoniStudio 是这些长期创作工作的承载体。",
     "hero.pillar.games": "游戏优先",
     "hero.pillar.products": "产品随后",
     "hero.pillar.ai": "AI 是放大器",
@@ -295,7 +306,7 @@ window.TRANSLATIONS = {
     "narrative.01.sub": "不是 PPT。不是死在 Figma 里的原型。真实的系统、真实的玩家、真实的用户，跑在线上。",
     "narrative.02.num": "02 / 结构",
     "narrative.02.title.html": "<em>游戏</em>是核心，产品是资金。",
-    "narrative.02.sub": "原创游戏世界是长期的创作骨架。产品负责赚钱，支撑工具、人力，以及沉下去的时间。",
+    "narrative.02.sub": "原创游戏世界是长期的创作骨架——在 BoniStudio 之下持续推进。产品负责赚钱，支撑工具、人力，以及沉下去的时间。",
     "narrative.03.num": "03 / 杠杆",
     "narrative.03.title.html": "AI 是<em>杠杆</em>，不是身份。",
     "narrative.03.sub": "用模型加速，不用它假装。架构、调试、评测、迭代——AI 是叠加在工程判断力之上的乘数，不是替代品。",
@@ -309,45 +320,45 @@ window.TRANSLATIONS = {
     "pillars.sub": "三根支柱层层支撑。游戏定义创作天花板，产品铺出现金跑道，AI 压缩了「想到」与「上线」之间的距离。",
     "pillars.games.idx": "01 / 游戏",
     "pillars.games.title": "游戏",
-    "pillars.games.desc": "在 BoniStudio 下持续推进的原创游戏世界。氛围、系统、机制与 IP——都为了活过单次发布周期。",
+    "pillars.games.desc": "这是长线所在。在 BoniStudio 下持续推进的原创游戏世界——氛围、系统、机制与 IP，都为了活过单次发布周期。",
     "pillars.games.meta": "创作骨架",
     "pillars.products.idx": "02 / 产品",
     "pillars.products.title": "产品",
-    "pillars.products.desc": "为上线而生的 iOS 应用与数字工具。服务真实用户，沉淀成可循环的现金流资产。OvO 是第一件，后面已经在路上。",
+    "pillars.products.desc": "这是当下的杠杆。为上线而生的 iOS 应用与数字工具，服务真实用户，沉淀成可循环的现金流资产。OvO 是第一件。",
     "pillars.products.meta": "现金跑道",
     "pillars.ai.idx": "03 / AI 杠杆",
     "pillars.ai.title": "AI 杠杆",
-    "pillars.ai.desc": "把 AI 作为工程乘数：架构、调试、评测、迭代。要的是产出质量，不是提示词表演。",
+    "pillars.ai.desc": "这是速度来源。把 AI 作为工程乘数，贯穿架构、调试、评测与迭代——要的是产出质量，不是提示词表演。",
     "pillars.ai.meta": "乘数层",
 
     /* Signals */
     "signals.eyebrow": "精选信号",
     "signals.title": "拿得出证据，不是许诺。",
-    "signals.sub.html": '这里只放几条硬信号。完整案例请看 <a href="work.html" style="color:var(--accent);">/work</a>。',
+    "signals.sub.html": '这里只放几条我已经发出的硬信号。完整案例请看 <a href="work.html" style="color:var(--accent);">/work</a>。',
     "signals.1.k": "已上线",
-    "signals.1.v": "OvO 在 iOS 上线——SwiftUI 前端，Firebase 后端。",
+    "signals.1.v": "我把 OvO 在 iOS 上线——SwiftUI 前端，Firebase 后端，独立完成设计与构建。",
     "signals.1.note": "端到端自己扛下来的。",
     "signals.2.k": "推进中",
-    "signals.2.v": "BoniStudio 旗下的原创游戏方向。",
+    "signals.2.v": "我正在 BoniStudio 之下推进长期的游戏方向。",
     "signals.2.note": "长周期的创作性 IP。",
     "signals.3.k": "工程",
-    "signals.3.v": "在真实团队里做过生产级的全栈功能。",
+    "signals.3.v": "我在真实团队的生产环境里做过全栈功能。",
     "signals.3.note": "不是只会做 side project 的履历。",
     "signals.4.k": "AI 实践",
-    "signals.4.v": "评测 AI 生成代码，撰写工程级提示词，覆盖调试、架构与边界场景。",
+    "signals.4.v": "我评测 AI 生成代码，撰写工程级提示词，覆盖调试、架构与边界场景。",
     "signals.4.note": "杠杆，不是装饰。",
 
     /* Founder */
     "founder.eyebrow": "创始人声明",
-    "founder.quote.html": "我不是在为声音而做。<br/>我在为<em>留下痕迹</em>而做。<br/>游戏、系统、产品——证明我曾经来过。",
-    "founder.sign": "Ace Chen — 创始人，BoniStudio",
+    "founder.quote.html": "我不是在为声音而做。<br/>我在为<em>留下痕迹</em>而做。<br/>游戏、系统、产品——证明我曾经来过，也只是一段更长作品的开始。",
+    "founder.sign": "Ace Chen — BoniStudio 创始人 · 一个人做出来的，不是一个委员会。",
 
     /* CTA */
     "cta.eyebrow": "欢迎",
     "cta.title": "愿意投入的人。愿意一起做的人。真正在 ship 的人。",
     "cta.actions.viewwork": "查看作品",
     "cta.actions.sponsor": "赞助这段旅程",
-    "cta.actions.email": "给我写信",
+    "cta.actions.email": "给 Ace 写信",
     "cta.side.label": "联系渠道",
     "cta.side.email.primary": "主",
     "cta.side.email.alternate": "备",
@@ -357,16 +368,16 @@ window.TRANSLATIONS = {
     "cta.side.proof.text": "/work — 案例研究",
 
     /* Footer */
-    "footer.home.copy": "© {year} Ace Chen / BoniStudio. 在公开中构建。",
+    "footer.home.copy": "© {year} Ace Chen —— 创始人、构建者、创作者。构建于 BoniStudio。",
     "footer.work": "作品",
     "footer.home": "首页",
     "footer.contact": "联系",
     "footer.top": "回顶 ↑",
 
     /* Work · Hero */
-    "work.hero.eyebrow": "/ 作品 — 精选",
-    "work.hero.title.html": "横跨<em>游戏</em>、iOS 应用、全栈系统与 AI 辅助流水线的真实产品。",
-    "work.hero.lead": "西雅图，CS 背景，创始人心态。宁可先 ship，再打磨；偏好能复利的系统。",
+    "work.hero.eyebrow": "/ 精选作品",
+    "work.hero.title.html": "<em>Ace Chen</em> 的精选作品，横跨游戏、产品与 AI 驱动系统。",
+    "work.hero.lead": "一个创始人作品集：BoniStudio 之下的长线游戏方向、已上线的 iOS 产品，以及 AI 辅助工程。宁可先 ship，再打磨；偏好能复利的系统。",
     "work.hero.meta.role.k": "角色",
     "work.hero.meta.role.v": "创始人 / 构建者",
     "work.hero.meta.studio.k": "工作室",
@@ -379,7 +390,7 @@ window.TRANSLATIONS = {
     /* Projects header */
     "projects.eyebrow": "精选项目",
     "projects.title.html": '已经 ship 的，<br/><span class="gradient-text">以及正在做的下一件。</span>',
-    "projects.sub": "按当前优先级排序。游戏是长线，产品是引擎，AI 贯穿每一层。",
+    "projects.sub": "按当前优先级排序。游戏是长线，归属 BoniStudio。产品是引擎。AI 贯穿每一层。",
 
     /* OvO */
     "project.ovo.status": "已在 iOS 上线",
@@ -387,13 +398,13 @@ window.TRANSLATIONS = {
     "project.ovo.row.a": "01 / 产品",
     "project.ovo.row.b": "2024 — 至今",
     "project.ovo.title": "OvO — 把数字拼豆，送出去。",
-    "project.ovo.summary": "一款 iOS 上的数字拼豆送礼平台。玩家在实时 App 里设计、铸造并赠送生成式拼豆作品。从第一行 commit 做到 App Store 上架。",
+    "project.ovo.summary": "一款 iOS 上的数字拼豆送礼平台——我亲手设计、构建并上线。玩家在实时 App 里创作、铸造并赠送生成式拼豆作品。从第一行 commit 做到 App Store 上架。",
     "project.ovo.built.h": "我做了什么",
     "project.ovo.built.1": "SwiftUI 前端，自建编辑器与画布流程",
     "project.ovo.built.2": "Firebase 鉴权、Firestore、存储与实时同步",
     "project.ovo.built.3": "铸造、赠礼与产品迭代的业务逻辑",
     "project.ovo.why.h": "为什么重要",
-    "project.ovo.why.p": "证明交付能力、系统思维与长期品牌潜力——一款真正跑在用户手里的 App,不是 mockup。",
+    "project.ovo.why.p": "我真正第一件完整上线的创始人产品。证明端到端的掌控力、系统思维与长期品牌潜力——一款真正跑在用户手里的 App，不是 mockup。",
     "project.stack.h": "技术栈",
 
     /* Game */
@@ -401,14 +412,14 @@ window.TRANSLATIONS = {
     "project.game.tag": "长线",
     "project.game.row.a": "02 / 游戏",
     "project.game.row.b": "持续推进",
-    "project.game.title": "BoniStudio — 原创游戏方向。",
-    "project.game.summary": "在 BoniStudio 下推进的长线原创游戏。它是其他一切的创作骨架——原创世界、原创机制，以及我真正想让它存在的交互系统。",
+    "project.game.title": "游戏方向 — BoniStudio 之下。",
+    "project.game.summary": "BoniStudio 是我长线原创游戏工作的承载体。原创世界、原创机制，以及我真正想让它存在的交互系统——在完整创作控制权下，安静地做。",
     "project.game.focus.h": "聚焦",
     "project.game.focus.1": "UE5 原型与交互系统",
     "project.game.focus.2": "世界观方向与调性",
     "project.game.focus.3": "机制、氛围与实验性循环",
     "project.game.why.h": "为什么重要",
-    "project.game.why.p": "这是工作室的长期创作方向——一个季度里看不出什么，但十年后回头一看，就是它定义了一切。",
+    "project.game.why.p": "BoniStudio 是我创作长线复利的地方——一个季度里看不出什么，但十年后回头一看，就是它定义了一切。",
 
     /* AI */
     "project.ai.status": "已落地",
@@ -430,7 +441,7 @@ window.TRANSLATIONS = {
     "project.plur.row.a": "04 / 早期创业",
     "project.plur.row.b": "早前",
     "project.plur.title": "PLUR — 属于一种音乐文化的编辑出版物。",
-    "project.plur.summary": "围绕电子音乐文化做的一个早期编辑/内容平台。是产品直觉、互联网语感，以及「真想把东西做出来」最早的信号。",
+    "project.plur.summary": "围绕电子音乐文化做的一个早期编辑/内容平台——我自己搭起来的。是产品直觉、互联网语感，以及「真想把东西做出来」最早的信号。",
     "project.plur.built.h": "我做了什么",
     "project.plur.built.1": "面向活跃读者的内容与编辑流水线",
     "project.plur.built.2": "基础 Web 基建与发布管线",
@@ -459,8 +470,8 @@ window.TRANSLATIONS = {
 
     /* Capabilities */
     "cap.eyebrow": "能力",
-    "cap.title": "四条战线，一个执行者。",
-    "cap.sub": "不是全家桶。这是我此刻真正在推进的四条前线，以及各自用来提速的工具。",
+    "cap.title": "我怎么做。我的强项。",
+    "cap.sub": "不是服务菜单。四条我此刻真正在推进的前线，以及在每一条上顺手使用的工具。",
     "cap.1.title": "产品构建",
     "cap.1.desc": "从头到尾掌握用户真正看到和感受到的那一层。",
     "cap.2.title": "全栈开发",
@@ -491,7 +502,7 @@ window.TRANSLATIONS = {
     "contact.eyebrow": "联系",
     "contact.title": "一起做一件能留下来的事。",
     "contact.lead": "欢迎：投资洽谈、赞助、合作，以及少量精选机会。既然你读到这里，我们大概应该聊聊。",
-    "contact.cta.email": "给我写信",
+    "contact.cta.email": "给 Ace 写信",
     "contact.cta.sponsor": "赞助这段旅程",
     "contact.list.email.primary.label": "邮箱 / 主",
     "contact.list.email.alternate.label": "邮箱 / 备",
@@ -501,7 +512,7 @@ window.TRANSLATIONS = {
     "contact.list.discord.text": "Discord — 按需开放",
 
     /* Footer work */
-    "footer.work.copy": "© {year} Ace Chen / BoniStudio. 这不是终点——这是开始。",
+    "footer.work.copy": "© {year} Ace Chen。长期的游戏与创作工作，归于 BoniStudio。",
 
     /* Lang toggle */
     "lang.toggle.aria": "切换语言"
