@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>Work — Ace Chen</title>
+  <meta name="description" content="Selected projects, experience, capabilities, and current work — Ace Chen / BoniStudio." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- ====================== Navigation ====================== -->
+  <header class="nav" data-nav>
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html" aria-label="Ace Chen — Home">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Ace Chen <span class="muted" style="color:var(--text-3); font-weight:400;">/ BoniStudio</span></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html"><span class="nav-link-text">Home</span></a>
+        <a href="work.html" class="is-active"><span class="nav-link-text">Work</span></a>
+        <a href="#experience"><span class="nav-link-text">Experience</span></a>
+        <a href="#contact"><span class="nav-link-text">Contact</span></a>
+      </nav>
+
+      <a class="nav-cta" href="#contact">
+        Get in touch
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+      <button class="nav-toggle" data-nav-toggle aria-label="Menu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================== Intro ====================== -->
+    <section class="work-hero">
+      <div class="container">
+        <div class="work-hero__grid">
+          <div>
+            <div class="eyebrow reveal" style="margin-bottom:20px;">/ Work — Selected</div>
+            <h1 class="reveal">
+              Real products across <em>games</em>, iOS apps, full-stack systems, and AI-assisted workflows.
+            </h1>
+            <p class="lead reveal" style="margin-top:28px;">
+              Seattle-based founder-minded builder with a CS background. A bias toward shipping real things over polishing ideas forever — and a preference for systems that compound.
+            </p>
+          </div>
+
+          <div class="work-hero__meta reveal">
+            <div class="row"><span>Role</span><span>Founder / Builder</span></div>
+            <div class="row"><span>Studio</span><span>BoniStudio</span></div>
+            <div class="row"><span>Based</span><span>Seattle · Global</span></div>
+            <div class="row"><span>Open</span><span>Investors · Sponsors · Collab</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== Featured Projects ====================== -->
+    <section class="section" aria-label="Featured projects" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Featured Projects</div>
+            <h2>What I've shipped,<br/><span class="gradient-text">and what I'm building next.</span></h2>
+          </div>
+          <p class="section-sub">
+            Ordered by current priority. The game direction is the long arc. The products are the engine. AI is baked into every layer.
+          </p>
+        </div>
+
+        <div class="projects">
+          <!-- OvO -->
+          <article class="project project--ovo reveal">
+            <div class="project__media" aria-hidden="true">
+              <span class="status-float">Live on iOS</span>
+              <span class="tag-float">Case Study</span>
+              <div class="mark">OvO</div>
+            </div>
+
+            <div class="project__body">
+              <div class="project__row">
+                <span>01 / Product</span>
+                <span class="divider"></span>
+                <span>2024 — present</span>
+              </div>
+              <h3 class="project__title">OvO — Digital bead art, gifted.</h3>
+              <p class="project__summary">
+                A digital bead-art gifting platform for iOS. Players design, mint, and gift generative bead works inside a real-time app. Built from the first commit to the App Store.
+              </p>
+
+              <div class="project__grid">
+                <div>
+                  <h4>What I built</h4>
+                  <ul>
+                    <li>SwiftUI frontend with custom editor & canvas flow</li>
+                    <li>Firebase auth, Firestore, storage, real-time sync</li>
+                    <li>Minting, gifting, and product iteration logic</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Why it matters</h4>
+                  <p>Proof of shipping ability, systems thinking, and long-term brand potential — an app actually running in users' hands, not a mockup.</p>
+                </div>
+              </div>
+
+              <div>
+                <h4 style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.22em; color:var(--text-3); text-transform:uppercase; margin-bottom:10px; font-weight:500;">Stack</h4>
+                <div class="project__stack">
+                  <span class="chip chip--accent">SwiftUI</span>
+                  <span class="chip">Firebase</span>
+                  <span class="chip">Firestore</span>
+                  <span class="chip">Firebase Auth</span>
+                  <span class="chip">Firebase Storage</span>
+                  <span class="chip">Xcode</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Game / BoniStudio -->
+          <article class="project project--game reveal">
+            <div class="project__media" aria-hidden="true">
+              <span class="status-float">In development</span>
+              <span class="tag-float">Long Arc</span>
+              <div class="mark">BONI</div>
+            </div>
+
+            <div class="project__body">
+              <div class="project__row">
+                <span>02 / Game</span>
+                <span class="divider"></span>
+                <span>Ongoing</span>
+              </div>
+              <h3 class="project__title">BoniStudio — Original game direction.</h3>
+              <p class="project__summary">
+                Long-horizon original game development under BoniStudio. A creative spine for everything else: original worlds, original mechanics, and the interactive systems I actually want to exist.
+              </p>
+
+              <div class="project__grid">
+                <div>
+                  <h4>Focus</h4>
+                  <ul>
+                    <li>UE5 prototyping & interactive systems</li>
+                    <li>Worldbuilding direction and tone</li>
+                    <li>Mechanics, atmosphere, experimental loops</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Why it matters</h4>
+                  <p>This is the long-term creative direction of the studio — the part that doesn't show up in a quarter, but defines what the rest of the decade looks like.</p>
+                </div>
+              </div>
+
+              <div>
+                <h4 style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.22em; color:var(--text-3); text-transform:uppercase; margin-bottom:10px; font-weight:500;">Stack</h4>
+                <div class="project__stack">
+                  <span class="chip chip--accent">Unreal Engine 5</span>
+                  <span class="chip">Blueprints</span>
+                  <span class="chip">Worldbuilding</span>
+                  <span class="chip">Interactive Systems</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- AI / Automation / Evaluation -->
+          <article class="project project--ai reveal">
+            <div class="project__media" aria-hidden="true">
+              <span class="status-float">Applied</span>
+              <span class="tag-float">Methodology</span>
+              <div class="mark">AI ⇄</div>
+            </div>
+
+            <div class="project__body">
+              <div class="project__row">
+                <span>03 / Method</span>
+                <span class="divider"></span>
+                <span>2023 — present</span>
+              </div>
+              <h3 class="project__title">AI, Automation & Code Evaluation.</h3>
+              <p class="project__summary">
+                Treating AI as an engineering multiplier, not a personality. Evaluation of model-generated code for correctness, reasoning quality, and real-world usability — plus developer-grade prompts embedded in real production workflows.
+              </p>
+
+              <div class="project__grid">
+                <div>
+                  <h4>What I do</h4>
+                  <ul>
+                    <li>Evaluate AI-generated code for correctness, reasoning & hallucination risk</li>
+                    <li>Write developer-style prompts for debugging, architecture & edge cases</li>
+                    <li>Use ChatGPT and Cursor as production accelerators</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Why it matters</h4>
+                  <p>Anyone can use AI. Few can tell when it's wrong, why it's wrong, and how to engineer around it. That difference is the moat.</p>
+                </div>
+              </div>
+
+              <div>
+                <h4 style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.22em; color:var(--text-3); text-transform:uppercase; margin-bottom:10px; font-weight:500;">Stack</h4>
+                <div class="project__stack">
+                  <span class="chip chip--accent">LLM Evaluation</span>
+                  <span class="chip">Prompt Engineering</span>
+                  <span class="chip">Cursor</span>
+                  <span class="chip">ChatGPT</span>
+                  <span class="chip">Python</span>
+                  <span class="chip">Automation</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PLUR -->
+          <article class="project project--plur reveal">
+            <div class="project__media" aria-hidden="true">
+              <span class="status-float">Archived signal</span>
+              <span class="tag-float">Early work</span>
+              <div class="mark">PLUR</div>
+            </div>
+
+            <div class="project__body">
+              <div class="project__row">
+                <span>04 / Early founder</span>
+                <span class="divider"></span>
+                <span>Prior</span>
+              </div>
+              <h3 class="project__title">PLUR — Editorial for a music culture.</h3>
+              <p class="project__summary">
+                An early editorial and content platform built around electronic music culture. A first clear signal of product instinct, internet fluency, and the appetite to actually ship things.
+              </p>
+
+              <div class="project__grid">
+                <div>
+                  <h4>What I built</h4>
+                  <ul>
+                    <li>Content and editorial workflow for a live audience</li>
+                    <li>Basic web infrastructure & publishing pipeline</li>
+                    <li>Brand and product direction from the ground up</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Why it matters</h4>
+                  <p>It predates the rest of this page — the early proof that I'd rather build a thing than talk about building one.</p>
+                </div>
+              </div>
+
+              <div>
+                <h4 style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.22em; color:var(--text-3); text-transform:uppercase; margin-bottom:10px; font-weight:500;">Stack</h4>
+                <div class="project__stack">
+                  <span class="chip">Editorial</span>
+                  <span class="chip">Web Infra</span>
+                  <span class="chip">Brand</span>
+                  <span class="chip">Community</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== Experience ====================== -->
+    <section class="section section--tight" id="experience" aria-label="Experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Experience</div>
+            <h2>Production teams.<br/><span class="gradient-text">Real engineering workflow.</span></h2>
+          </div>
+          <p class="section-sub">
+            Condensed from the full CV into the signal that matters: shipping features in real engineering organizations, async and in person.
+          </p>
+        </div>
+
+        <div class="experience reveal-stagger">
+          <div class="exp-item">
+            <div class="exp-item__date">2024 — 2025</div>
+            <div class="exp-item__role">
+              <h3>Part-Time Software Development Engineer</h3>
+              <span class="company">Yuanxing Yueya</span>
+            </div>
+            <div class="exp-item__desc">
+              <p>Built and maintained full-stack features for production WeChat Mini Programs.</p>
+              <ul>
+                <li>Shipped usability and performance improvements into live product surfaces</li>
+                <li>Owned end-to-end feature work from spec to deploy</li>
+                <li>Collaborated asynchronously across time zones with a distributed team</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-item__date">2023</div>
+            <div class="exp-item__role">
+              <h3>Software Engineer Intern</h3>
+              <span class="company">Lenovo</span>
+            </div>
+            <div class="exp-item__desc">
+              <p>Contributed to feature work, debugging, testing, and code review inside an enterprise engineering workflow.</p>
+              <ul>
+                <li>Worked inside structured review and release processes at scale</li>
+                <li>Practiced disciplined debugging across a large existing codebase</li>
+                <li>Learned how real engineering orgs ship — and how to ship faster without breaking them</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== Capabilities ====================== -->
+    <section class="section" aria-label="Capabilities">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Capabilities</div>
+            <h2>Four stacks. One operator.</h2>
+          </div>
+          <p class="section-sub">
+            Not a laundry list. These are the four fronts I actively work across — and the tools I use to move quickly on each.
+          </p>
+        </div>
+
+        <div class="cap-grid reveal-stagger">
+          <div class="cap">
+            <div class="cap__head">
+              <h3>Product Building</h3>
+              <div class="cap__idx">01</div>
+            </div>
+            <p class="muted" style="font-size:14px; line-height:1.6;">End-to-end ownership of the surface users actually see and feel.</p>
+            <div class="cap__chips">
+              <span class="chip chip--accent">iOS / SwiftUI</span>
+              <span class="chip">Product Design</span>
+              <span class="chip">UX Systems</span>
+              <span class="chip">Firebase</span>
+              <span class="chip">Shipping Playbooks</span>
+              <span class="chip">0 → 1</span>
+            </div>
+          </div>
+
+          <div class="cap">
+            <div class="cap__head">
+              <h3>Full-Stack Development</h3>
+              <div class="cap__idx">02</div>
+            </div>
+            <p class="muted" style="font-size:14px; line-height:1.6;">Comfortable from database to pixel, picking the right tool for the job.</p>
+            <div class="cap__chips">
+              <span class="chip chip--accent">TypeScript / JS</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">React</span>
+              <span class="chip">Python</span>
+              <span class="chip">SQL</span>
+              <span class="chip">REST / API design</span>
+              <span class="chip">Git</span>
+            </div>
+          </div>
+
+          <div class="cap">
+            <div class="cap__head">
+              <h3>AI-Assisted Engineering</h3>
+              <div class="cap__idx">03</div>
+            </div>
+            <p class="muted" style="font-size:14px; line-height:1.6;">AI used as leverage across architecture, debugging, evaluation, and iteration.</p>
+            <div class="cap__chips">
+              <span class="chip chip--accent">Prompt Engineering</span>
+              <span class="chip">LLM Evaluation</span>
+              <span class="chip">Cursor</span>
+              <span class="chip">ChatGPT</span>
+              <span class="chip">Claude</span>
+              <span class="chip">Automation</span>
+              <span class="chip">Debugging Workflows</span>
+            </div>
+          </div>
+
+          <div class="cap">
+            <div class="cap__head">
+              <h3>Game / Creative Tech</h3>
+              <div class="cap__idx">04</div>
+            </div>
+            <p class="muted" style="font-size:14px; line-height:1.6;">Interactive systems, worldbuilding, and creative tools — the long arc.</p>
+            <div class="cap__chips">
+              <span class="chip chip--accent">Unreal Engine 5</span>
+              <span class="chip">Blueprints</span>
+              <span class="chip">Interactive Systems</span>
+              <span class="chip">Worldbuilding</span>
+              <span class="chip">Prototyping</span>
+              <span class="chip">Creative Direction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== Now ====================== -->
+    <section class="section section--tight" aria-label="Now" id="now">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Now / 2026</div>
+            <h2>What I'm building this quarter.</h2>
+          </div>
+          <p class="section-sub">
+            This block updates as the work evolves — a living signal of where energy is actually going, not what I did a year ago.
+          </p>
+        </div>
+
+        <div class="now-grid reveal-stagger">
+          <div class="now-card">
+            <div class="now-card__tag">Active</div>
+            <h3>Growing OvO.</h3>
+            <p>Iterating the product, sharpening the editor experience, and figuring out the early distribution loops that actually work.</p>
+          </div>
+          <div class="now-card">
+            <div class="now-card__tag">In motion</div>
+            <h3>Building future app / product lines.</h3>
+            <p>Designing the next wave of digital tools that can live alongside OvO — each one a fresh surface and a cleaner engine.</p>
+          </div>
+          <div class="now-card">
+            <div class="now-card__tag">Long arc</div>
+            <h3>Game direction under BoniStudio.</h3>
+            <p>Prototyping mechanics and worldbuilding pieces for the original game line. Quiet work, compounding weekly.</p>
+          </div>
+          <div class="now-card">
+            <div class="now-card__tag">Infrastructure</div>
+            <h3>Expanding AI-assisted workflows.</h3>
+            <p>Sharpening the personal engineering stack — evaluation, prompting, and leverage loops that make everything else ship faster.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== Contact ====================== -->
+    <section class="section contact" id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="contact__inner">
+          <div class="reveal">
+            <div class="eyebrow" style="margin-bottom:20px;">Contact</div>
+            <h2 class="gradient-text">Let's build something that lasts.</h2>
+            <p class="lead" style="margin-top:24px;">
+              Open to: investment conversations, sponsorship, collaboration, and a small number of selected opportunities. If you've read this far, we should probably talk.
+            </p>
+            <div class="cta__actions" style="margin-top:28px;">
+              <a class="btn btn-primary btn-lg" href="mailto:hello@bonistudio.dev">
+                Email me
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="btn btn-ghost btn-lg" href="mailto:hello@bonistudio.dev?subject=Sponsor%20the%20Journey">
+                Sponsor the Journey
+              </a>
+            </div>
+          </div>
+
+          <div class="contact__list reveal">
+            <a href="mailto:hello@bonistudio.dev">
+              hello@bonistudio.dev
+              <span>Email</span>
+            </a>
+            <a href="https://github.com/BoniStudio" target="_blank" rel="noopener">
+              github.com/BoniStudio
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+              linkedin / ace-chen
+              <span>LinkedIn</span>
+            </a>
+            <a href="#" aria-disabled="true" onclick="return false;">
+              discord — on request
+              <span>Discord</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span data-year>2026</span> Ace Chen / BoniStudio. This is not the end — it's the beginning.</div>
+      <div>
+        <a href="index.html">Home</a> &nbsp;·&nbsp;
+        <a href="#contact">Contact</a> &nbsp;·&nbsp;
+        <a href="#" aria-label="Top of page" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
