@@ -12,7 +12,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="page-home" data-page="home">
+
+  <!-- ====================== Continuous background stage ====================== -->
+  <div class="page-stage" data-page-stage aria-hidden="true">
+    <div class="page-stage__stars" data-parallax="-0.04"></div>
+    <div class="page-stage__stars--sparse" data-parallax="-0.12"></div>
+    <div class="page-stage__grid" data-parallax="-0.02"></div>
+    <div class="page-stage__glow page-stage__glow--top" data-parallax="0.06"></div>
+    <div class="page-stage__glow page-stage__glow--mid" data-parallax="-0.08"></div>
+    <div class="page-stage__glow page-stage__glow--low" data-parallax="-0.04"></div>
+  </div>
+
   <div class="noise" aria-hidden="true"></div>
 
   <!-- ====================== Navigation ====================== -->
@@ -24,20 +35,33 @@
       </a>
 
       <nav class="nav-links" aria-label="Primary">
-        <a href="index.html" class="is-active"><span class="nav-link-text">Home</span></a>
-        <a href="work.html"><span class="nav-link-text">Work</span></a>
-        <a href="#founder"><span class="nav-link-text">About</span></a>
-        <a href="#contact"><span class="nav-link-text">Contact</span></a>
+        <a href="index.html" class="is-active"><span class="nav-link-text" data-i18n="nav.home">Home</span></a>
+        <a href="work.html"><span class="nav-link-text" data-i18n="nav.work">Work</span></a>
+        <a href="#founder"><span class="nav-link-text" data-i18n="nav.about">About</span></a>
+        <a href="#contact"><span class="nav-link-text" data-i18n="nav.contact">Contact</span></a>
       </nav>
 
-      <a class="nav-cta" href="work.html">
-        View Work
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
+      <div class="nav-right">
+        <button
+          class="lang-toggle"
+          data-lang-toggle
+          type="button"
+          data-i18n-attr="aria-label:lang.toggle.aria"
+          aria-label="Toggle language">
+          <span class="lang-toggle__item" data-lang="en">EN</span>
+          <span class="lang-toggle__sep" aria-hidden="true"></span>
+          <span class="lang-toggle__item" data-lang="zh">中文</span>
+        </button>
 
-      <button class="nav-toggle" data-nav-toggle aria-label="Menu">
-        <span></span>
-      </button>
+        <a class="nav-cta" href="work.html">
+          <span data-i18n="nav.cta.viewwork">View Work</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+
+        <button class="nav-toggle" data-nav-toggle aria-label="Menu">
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -53,58 +77,62 @@
 
       <div class="container hero__content">
         <div class="hero__meta reveal">
-          <span class="live">Live / 2026</span>
-          <span>Seattle × Global</span>
-          <span>Independent</span>
+          <span class="live" data-i18n="hero.meta.live">Live / 2026</span>
+          <span data-i18n="hero.meta.location">Seattle × Global</span>
+          <span data-i18n="hero.meta.status">Independent</span>
         </div>
 
-        <h1 class="hero__title reveal">
+        <h1 class="hero__title reveal" data-i18n-html="hero.title.html">
           <span class="line">Building <em>games</em>,</span>
           <span class="line">products, and digital</span>
           <span class="line line--muted">systems that actually ship.</span>
         </h1>
 
-        <p class="hero__subtitle reveal">
+        <p class="hero__subtitle reveal" data-i18n="hero.subtitle">
           Founder-minded builder focused on original game worlds, product systems that generate real traction, and AI used as leverage — not as identity.
         </p>
 
         <div class="hero__pillars reveal">
-          <span>Games first</span>
-          <span>Products second</span>
-          <span>AI as amplifier</span>
+          <span data-i18n="hero.pillar.games">Games first</span>
+          <span data-i18n="hero.pillar.products">Products second</span>
+          <span data-i18n="hero.pillar.ai">AI as amplifier</span>
         </div>
 
         <div class="hero__actions reveal">
           <a class="btn btn-primary btn-lg" href="work.html">
-            View Work
+            <span data-i18n="hero.cta.viewwork">View Work</span>
             <span class="arrow" aria-hidden="true">→</span>
           </a>
-          <a class="btn btn-ghost btn-lg" href="#contact">
+          <a class="btn btn-ghost btn-lg" href="#contact" data-i18n="hero.cta.contact">
             Contact / Sponsor
           </a>
         </div>
       </div>
 
       <div class="hero__marquee" aria-hidden="true">
-        <span>OvO — shipped on iOS</span>
-        <span class="scroll-hint">Scroll <span class="bar"></span> Narrative</span>
-        <span>BoniStudio / Game</span>
+        <span data-i18n="hero.marquee.left">OvO — shipped on iOS</span>
+        <span class="scroll-hint">
+          <span data-i18n="hero.marquee.scroll">Scroll</span>
+          <span class="bar"></span>
+          <span data-i18n="hero.marquee.mid">Narrative</span>
+        </span>
+        <span data-i18n="hero.marquee.right">BoniStudio / Game</span>
       </div>
     </section>
 
     <!-- ====================== Narrative ====================== -->
     <section class="narrative" data-narrative aria-label="Narrative">
-      <div class="narrative__track">
-        <div class="narrative__progress" aria-hidden="true"><span data-narrative-bar></span></div>
+      <div class="narrative__progress" aria-hidden="true"><span data-narrative-bar></span></div>
 
+      <div class="narrative__track">
         <article class="narrative__panel narrative__panel--a">
           <div class="narrative__panel-bg"></div>
           <div class="container">
-            <div class="narrative__num reveal">01 / Signal</div>
-            <h2 class="narrative__title reveal">
+            <div class="narrative__num reveal" data-i18n="narrative.01.num">01 / Signal</div>
+            <h2 class="narrative__title reveal" data-i18n-html="narrative.01.title.html">
               I build things that <em>feel like the future</em>.
             </h2>
-            <p class="narrative__sub reveal">
+            <p class="narrative__sub reveal" data-i18n="narrative.01.sub">
               Not slideware. Not prototypes that die in Figma. Real systems, real players, real users — running in production.
             </p>
           </div>
@@ -113,11 +141,11 @@
         <article class="narrative__panel narrative__panel--b">
           <div class="narrative__panel-bg"></div>
           <div class="container">
-            <div class="narrative__num reveal">02 / Stack</div>
-            <h2 class="narrative__title reveal">
+            <div class="narrative__num reveal" data-i18n="narrative.02.num">02 / Stack</div>
+            <h2 class="narrative__title reveal" data-i18n-html="narrative.02.title.html">
               <em>Games</em> are the core. Products fund the path.
             </h2>
-            <p class="narrative__sub reveal">
+            <p class="narrative__sub reveal" data-i18n="narrative.02.sub">
               Original game worlds are the long-term creative spine. Shipped products pay for the engine room: tools, talent, and time to go deeper.
             </p>
           </div>
@@ -126,11 +154,11 @@
         <article class="narrative__panel narrative__panel--c">
           <div class="narrative__panel-bg"></div>
           <div class="container">
-            <div class="narrative__num reveal">03 / Leverage</div>
-            <h2 class="narrative__title reveal">
+            <div class="narrative__num reveal" data-i18n="narrative.03.num">03 / Leverage</div>
+            <h2 class="narrative__title reveal" data-i18n-html="narrative.03.title.html">
               AI is <em>leverage</em>, not identity.
             </h2>
-            <p class="narrative__sub reveal">
+            <p class="narrative__sub reveal" data-i18n="narrative.03.sub">
               I use models to accelerate, not to pretend. Architecture, debugging, evaluation, iteration — AI is the multiplier stacked on top of engineering judgment.
             </p>
           </div>
@@ -139,11 +167,11 @@
         <article class="narrative__panel narrative__panel--d">
           <div class="narrative__panel-bg"></div>
           <div class="container">
-            <div class="narrative__num reveal">04 / Intent</div>
-            <h2 class="narrative__title reveal">
+            <div class="narrative__num reveal" data-i18n="narrative.04.num">04 / Intent</div>
+            <h2 class="narrative__title reveal" data-i18n-html="narrative.04.title.html">
               This site is part lab, part signal, part <em>proof</em>.
             </h2>
-            <p class="narrative__sub reveal">
+            <p class="narrative__sub reveal" data-i18n="narrative.04.sub">
               A living surface for everything I'm shipping. Come back in a month — something will be different.
             </p>
           </div>
@@ -152,14 +180,14 @@
     </section>
 
     <!-- ====================== Focus Pillars ====================== -->
-    <section class="section" aria-label="Focus">
+    <section class="section section--pillars" aria-label="Focus">
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <div class="eyebrow">Focus Pillars</div>
-            <h2>Three directions.<br/><span class="gradient-text">One long arc.</span></h2>
+            <div class="eyebrow" data-i18n="pillars.eyebrow">Focus Pillars</div>
+            <h2 data-i18n-html="pillars.title.html">Three directions.<br/><span class="gradient-text">One long arc.</span></h2>
           </div>
-          <p class="section-sub">
+          <p class="section-sub" data-i18n="pillars.sub">
             Each pillar supports the next. Games set the creative ceiling. Products create the runway. AI compresses the distance between ideas and shipped reality.
           </p>
         </div>
@@ -167,82 +195,82 @@
         <div class="pillars-grid reveal-stagger">
           <article class="pillar">
             <div class="pillar__top">
-              <div class="pillar__index">01 / Games</div>
+              <div class="pillar__index" data-i18n="pillars.games.idx">01 / Games</div>
               <div class="pillar__icon" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h4M8 9v4"/><circle cx="16" cy="11" r="1.2"/><circle cx="14" cy="13" r="1.2"/><path d="M4 14.5c0-3 1.4-6 4-6h8c2.6 0 4 3 4 6 0 2-1 3-2.5 3S16 15 15 15H9c-1 0-1 2.5-2.5 2.5S4 16.5 4 14.5Z"/></svg>
               </div>
             </div>
             <div>
-              <h3>Games</h3>
-              <p>Long-term original game worlds under BoniStudio. Atmosphere, systems, mechanics, and IP designed to last beyond a single release cycle.</p>
+              <h3 data-i18n="pillars.games.title">Games</h3>
+              <p data-i18n="pillars.games.desc">Long-term original game worlds under BoniStudio. Atmosphere, systems, mechanics, and IP designed to last beyond a single release cycle.</p>
             </div>
-            <div class="pillar__meta"><span class="dash"></span> Creative spine</div>
+            <div class="pillar__meta"><span class="dash"></span> <span data-i18n="pillars.games.meta">Creative spine</span></div>
           </article>
 
           <article class="pillar">
             <div class="pillar__top">
-              <div class="pillar__index">02 / Products</div>
+              <div class="pillar__index" data-i18n="pillars.products.idx">02 / Products</div>
               <div class="pillar__icon" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M9 7h6M9 11h6M9 15h4"/></svg>
               </div>
             </div>
             <div>
-              <h3>Products</h3>
-              <p>iOS apps and digital tools engineered to ship, reach users, and become recurring cash-flow assets. OvO is the first. More are already in motion.</p>
+              <h3 data-i18n="pillars.products.title">Products</h3>
+              <p data-i18n="pillars.products.desc">iOS apps and digital tools engineered to ship, reach users, and become recurring cash-flow assets. OvO is the first. More are already in motion.</p>
             </div>
-            <div class="pillar__meta"><span class="dash"></span> Runway engine</div>
+            <div class="pillar__meta"><span class="dash"></span> <span data-i18n="pillars.products.meta">Runway engine</span></div>
           </article>
 
           <article class="pillar">
             <div class="pillar__top">
-              <div class="pillar__index">03 / AI Leverage</div>
+              <div class="pillar__index" data-i18n="pillars.ai.idx">03 / AI Leverage</div>
               <div class="pillar__icon" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/><circle cx="12" cy="12" r="4"/></svg>
               </div>
             </div>
             <div>
-              <h3>AI Leverage</h3>
-              <p>AI applied as an engineering multiplier: architecture, debugging, evaluation, iteration. Output quality, not prompt theatre.</p>
+              <h3 data-i18n="pillars.ai.title">AI Leverage</h3>
+              <p data-i18n="pillars.ai.desc">AI applied as an engineering multiplier: architecture, debugging, evaluation, iteration. Output quality, not prompt theatre.</p>
             </div>
-            <div class="pillar__meta"><span class="dash"></span> Multiplier layer</div>
+            <div class="pillar__meta"><span class="dash"></span> <span data-i18n="pillars.ai.meta">Multiplier layer</span></div>
           </article>
         </div>
       </div>
     </section>
 
     <!-- ====================== Selected Signals ====================== -->
-    <section class="section section--tight" aria-label="Selected signals">
+    <section class="section section--tight section--signals" aria-label="Selected signals">
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <div class="eyebrow">Selected Signals</div>
-            <h2>Proof, not promises.</h2>
+            <div class="eyebrow" data-i18n="signals.eyebrow">Selected Signals</div>
+            <h2 data-i18n="signals.title">Proof, not promises.</h2>
           </div>
-          <p class="section-sub">
+          <p class="section-sub" data-i18n-html="signals.sub.html">
             A handful of concrete signals. The full case studies live on <a href="work.html" style="color:var(--accent);">/work</a>.
           </p>
         </div>
 
         <div class="signals reveal-stagger">
           <div class="signal">
-            <div class="signal__k">Shipped</div>
-            <div class="signal__v">OvO launched on iOS — built in SwiftUI with a Firebase backend.</div>
-            <div class="signal__note">Product ownership, end to end.</div>
+            <div class="signal__k" data-i18n="signals.1.k">Shipped</div>
+            <div class="signal__v" data-i18n="signals.1.v">OvO launched on iOS — built in SwiftUI with a Firebase backend.</div>
+            <div class="signal__note" data-i18n="signals.1.note">Product ownership, end to end.</div>
           </div>
           <div class="signal">
-            <div class="signal__k">In motion</div>
-            <div class="signal__v">Original game direction under BoniStudio.</div>
-            <div class="signal__note">Long-horizon creative IP.</div>
+            <div class="signal__k" data-i18n="signals.2.k">In motion</div>
+            <div class="signal__v" data-i18n="signals.2.v">Original game direction under BoniStudio.</div>
+            <div class="signal__note" data-i18n="signals.2.note">Long-horizon creative IP.</div>
           </div>
           <div class="signal">
-            <div class="signal__k">Engineering</div>
-            <div class="signal__v">Production full-stack feature work across real teams.</div>
-            <div class="signal__note">Not a side-project résumé.</div>
+            <div class="signal__k" data-i18n="signals.3.k">Engineering</div>
+            <div class="signal__v" data-i18n="signals.3.v">Production full-stack feature work across real teams.</div>
+            <div class="signal__note" data-i18n="signals.3.note">Not a side-project résumé.</div>
           </div>
           <div class="signal">
-            <div class="signal__k">AI Practice</div>
-            <div class="signal__v">Evaluated AI-generated code and wrote developer-grade prompts for debugging, architecture, and edge cases.</div>
-            <div class="signal__note">Leverage, not decoration.</div>
+            <div class="signal__k" data-i18n="signals.4.k">AI Practice</div>
+            <div class="signal__v" data-i18n="signals.4.v">Evaluated AI-generated code and wrote developer-grade prompts for debugging, architecture, and edge cases.</div>
+            <div class="signal__note" data-i18n="signals.4.note">Leverage, not decoration.</div>
           </div>
         </div>
       </div>
@@ -251,15 +279,15 @@
     <!-- ====================== Founder Statement ====================== -->
     <section class="section founder" id="founder" aria-label="Founder statement">
       <div class="container founder__inner">
-        <div class="eyebrow reveal" style="margin-bottom:28px;">Founder Statement</div>
-        <h2 class="founder__quote reveal">
+        <div class="eyebrow reveal" style="margin-bottom:28px;" data-i18n="founder.eyebrow">Founder Statement</div>
+        <h2 class="founder__quote reveal" data-i18n-html="founder.quote.html">
           I'm not building for noise.<br/>
           I'm building for <em>permanence</em>.<br/>
           Games, systems, and products that prove I was here.
         </h2>
         <div class="founder__sign reveal">
           <span class="line"></span>
-          <span>Ace Chen — Founder, BoniStudio</span>
+          <span data-i18n="founder.sign">Ace Chen — Founder, BoniStudio</span>
         </div>
       </div>
     </section>
@@ -270,29 +298,45 @@
       <div class="container">
         <div class="cta__inner">
           <div class="reveal">
-            <div class="eyebrow" style="margin-bottom:20px;">Open for</div>
-            <h2 class="gradient-text">Backers. Collaborators. People who ship.</h2>
+            <div class="eyebrow" style="margin-bottom:20px;" data-i18n="cta.eyebrow">Open for</div>
+            <h2 class="gradient-text" data-i18n="cta.title">Backers. Collaborators. People who ship.</h2>
             <div class="cta__actions">
               <a class="btn btn-primary btn-lg" href="work.html">
-                View Work
+                <span data-i18n="cta.actions.viewwork">View Work</span>
                 <span class="arrow" aria-hidden="true">→</span>
               </a>
-              <a class="btn btn-ghost btn-lg" href="mailto:hello@bonistudio.dev">
+              <a class="btn btn-ghost btn-lg" href="mailto:hello@bonistudio.dev" data-i18n="cta.actions.sponsor">
                 Sponsor the Journey
               </a>
-              <a class="btn btn-ghost btn-lg" href="mailto:hello@bonistudio.dev">
+              <a class="btn btn-ghost btn-lg" href="mailto:hello@bonistudio.dev" data-i18n="cta.actions.email">
                 Email me
               </a>
             </div>
           </div>
 
           <aside class="cta__side reveal">
-            <p style="color:var(--text-3); font-family:var(--font-mono); font-size:12px; letter-spacing:0.22em; text-transform:uppercase;">Channels</p>
+            <p style="color:var(--text-3); font-family:var(--font-mono); font-size:12px; letter-spacing:0.22em; text-transform:uppercase;" data-i18n="cta.side.label">Channels</p>
             <ul>
-              <li><a href="mailto:hello@bonistudio.dev">hello@bonistudio.dev</a><span>Email</span></li>
-              <li><a href="https://github.com/BoniStudio" target="_blank" rel="noopener">github.com/BoniStudio</a><span>Code</span></li>
-              <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">linkedin / ace-chen</a><span>Pro</span></li>
-              <li><a href="work.html">/work — case studies</a><span>Proof</span></li>
+              <li>
+                <a href="mailto:hello@bonistudio.dev">hello@bonistudio.dev</a>
+                <span data-i18n="cta.side.email.primary">Primary</span>
+              </li>
+              <li>
+                <a href="mailto:bonistudio.core@gmail.com">bonistudio.core@gmail.com</a>
+                <span data-i18n="cta.side.email.alternate">Alternate</span>
+              </li>
+              <li>
+                <a href="https://github.com/BoniStudio" target="_blank" rel="noopener">github.com/BoniStudio</a>
+                <span data-i18n="cta.side.code">Code</span>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">linkedin / ace-chen</a>
+                <span data-i18n="cta.side.pro">Pro</span>
+              </li>
+              <li>
+                <a href="work.html" data-i18n="cta.side.proof.text">/work — case studies</a>
+                <span data-i18n="cta.side.proof">Proof</span>
+              </li>
             </ul>
           </aside>
         </div>
@@ -302,15 +346,16 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <div>© <span data-year>2026</span> Ace Chen / BoniStudio. Built in the open.</div>
+      <div data-i18n-template="footer.home.copy">© <span data-year>2026</span> Ace Chen / BoniStudio. Built in the open.</div>
       <div>
-        <a href="work.html">Work</a> &nbsp;·&nbsp;
-        <a href="#contact">Contact</a> &nbsp;·&nbsp;
-        <a href="#" aria-label="Top of page" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Top ↑</a>
+        <a href="work.html" data-i18n="footer.work">Work</a> &nbsp;·&nbsp;
+        <a href="#contact" data-i18n="footer.contact">Contact</a> &nbsp;·&nbsp;
+        <a href="#" aria-label="Top of page" data-i18n="footer.top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Top ↑</a>
       </div>
     </div>
   </footer>
 
+  <script src="translations.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>

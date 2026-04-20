@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="page-work" data-page="work">
   <div class="noise" aria-hidden="true"></div>
 
   <!-- ====================== Navigation ====================== -->
@@ -24,20 +24,33 @@
       </a>
 
       <nav class="nav-links" aria-label="Primary">
-        <a href="index.html"><span class="nav-link-text">Home</span></a>
-        <a href="work.html" class="is-active"><span class="nav-link-text">Work</span></a>
-        <a href="#experience"><span class="nav-link-text">Experience</span></a>
-        <a href="#contact"><span class="nav-link-text">Contact</span></a>
+        <a href="index.html"><span class="nav-link-text" data-i18n="nav.home">Home</span></a>
+        <a href="work.html" class="is-active"><span class="nav-link-text" data-i18n="nav.work">Work</span></a>
+        <a href="#experience"><span class="nav-link-text" data-i18n="nav.experience">Experience</span></a>
+        <a href="#contact"><span class="nav-link-text" data-i18n="nav.contact">Contact</span></a>
       </nav>
 
-      <a class="nav-cta" href="#contact">
-        Get in touch
-        <span class="arrow" aria-hidden="true">→</span>
-      </a>
+      <div class="nav-right">
+        <button
+          class="lang-toggle"
+          data-lang-toggle
+          type="button"
+          data-i18n-attr="aria-label:lang.toggle.aria"
+          aria-label="Toggle language">
+          <span class="lang-toggle__item" data-lang="en">EN</span>
+          <span class="lang-toggle__sep" aria-hidden="true"></span>
+          <span class="lang-toggle__item" data-lang="zh">中文</span>
+        </button>
 
-      <button class="nav-toggle" data-nav-toggle aria-label="Menu">
-        <span></span>
-      </button>
+        <a class="nav-cta" href="#contact">
+          <span data-i18n="nav.cta.contact">Get in touch</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+
+        <button class="nav-toggle" data-nav-toggle aria-label="Menu">
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -47,20 +60,32 @@
       <div class="container">
         <div class="work-hero__grid">
           <div>
-            <div class="eyebrow reveal" style="margin-bottom:20px;">/ Work — Selected</div>
-            <h1 class="reveal">
+            <div class="eyebrow reveal" style="margin-bottom:20px;" data-i18n="work.hero.eyebrow">/ Work — Selected</div>
+            <h1 class="reveal" data-i18n-html="work.hero.title.html">
               Real products across <em>games</em>, iOS apps, full-stack systems, and AI-assisted workflows.
             </h1>
-            <p class="lead reveal" style="margin-top:28px;">
+            <p class="lead reveal" style="margin-top:28px;" data-i18n="work.hero.lead">
               Seattle-based founder-minded builder with a CS background. A bias toward shipping real things over polishing ideas forever — and a preference for systems that compound.
             </p>
           </div>
 
           <div class="work-hero__meta reveal">
-            <div class="row"><span>Role</span><span>Founder / Builder</span></div>
-            <div class="row"><span>Studio</span><span>BoniStudio</span></div>
-            <div class="row"><span>Based</span><span>Seattle · Global</span></div>
-            <div class="row"><span>Open</span><span>Investors · Sponsors · Collab</span></div>
+            <div class="row">
+              <span data-i18n="work.hero.meta.role.k">Role</span>
+              <span data-i18n="work.hero.meta.role.v">Founder / Builder</span>
+            </div>
+            <div class="row">
+              <span data-i18n="work.hero.meta.studio.k">Studio</span>
+              <span data-i18n="work.hero.meta.studio.v">BoniStudio</span>
+            </div>
+            <div class="row">
+              <span data-i18n="work.hero.meta.based.k">Based</span>
+              <span data-i18n="work.hero.meta.based.v">Seattle · Global</span>
+            </div>
+            <div class="row">
+              <span data-i18n="work.hero.meta.open.k">Open</span>
+              <span data-i18n="work.hero.meta.open.v">Investors · Sponsors · Collab</span>
+            </div>
           </div>
         </div>
       </div>
@@ -71,10 +96,10 @@
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <div class="eyebrow">Featured Projects</div>
-            <h2>What I've shipped,<br/><span class="gradient-text">and what I'm building next.</span></h2>
+            <div class="eyebrow" data-i18n="projects.eyebrow">Featured Projects</div>
+            <h2 data-i18n-html="projects.title.html">What I've shipped,<br/><span class="gradient-text">and what I'm building next.</span></h2>
           </div>
-          <p class="section-sub">
+          <p class="section-sub" data-i18n="projects.sub">
             Ordered by current priority. The game direction is the long arc. The products are the engine. AI is baked into every layer.
           </p>
         </div>
@@ -83,39 +108,39 @@
           <!-- OvO -->
           <article class="project project--ovo reveal">
             <div class="project__media" aria-hidden="true">
-              <span class="status-float">Live on iOS</span>
-              <span class="tag-float">Case Study</span>
+              <span class="status-float" data-i18n="project.ovo.status">Live on iOS</span>
+              <span class="tag-float" data-i18n="project.ovo.tag">Case Study</span>
               <div class="mark">OvO</div>
             </div>
 
             <div class="project__body">
               <div class="project__row">
-                <span>01 / Product</span>
+                <span data-i18n="project.ovo.row.a">01 / Product</span>
                 <span class="divider"></span>
-                <span>2024 — present</span>
+                <span data-i18n="project.ovo.row.b">2024 — present</span>
               </div>
-              <h3 class="project__title">OvO — Digital bead art, gifted.</h3>
-              <p class="project__summary">
+              <h3 class="project__title" data-i18n="project.ovo.title">OvO — Digital bead art, gifted.</h3>
+              <p class="project__summary" data-i18n="project.ovo.summary">
                 A digital bead-art gifting platform for iOS. Players design, mint, and gift generative bead works inside a real-time app. Built from the first commit to the App Store.
               </p>
 
               <div class="project__grid">
                 <div>
-                  <h4>What I built</h4>
+                  <h4 data-i18n="project.ovo.built.h">What I built</h4>
                   <ul>
-                    <li>SwiftUI frontend with custom editor & canvas flow</li>
-                    <li>Firebase auth, Firestore, storage, real-time sync</li>
-                    <li>Minting, gifting, and product iteration logic</li>
+                    <li data-i18n="project.ovo.built.1">SwiftUI frontend with custom editor & canvas flow</li>
+                    <li data-i18n="project.ovo.built.2">Firebase auth, Firestore, storage, real-time sync</li>
+                    <li data-i18n="project.ovo.built.3">Minting, gifting, and product iteration logic</li>
                   </ul>
                 </div>
                 <div>
-                  <h4>Why it matters</h4>
-                  <p>Proof of shipping ability, systems thinking, and long-term brand potential — an app actually running in users' hands, not a mockup.</p>
+                  <h4 data-i18n="project.ovo.why.h">Why it matters</h4>
+                  <p data-i18n="project.ovo.why.p">Proof of shipping ability, systems thinking, and long-term brand potential — an app actually running in users' hands, not a mockup.</p>
                 </div>
               </div>
 
               <div>
-                <h4 style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.22em; color:var(--text-3); text-transform:uppercase; margin-bottom:10px; font-weight:500;">Stack</h4>
+                <h4 style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.22em; color:var(--text-3); text-transform:uppercase; margin-bottom:10px; font-weight:500;" data-i18n="project.stack.h">Stack</h4>
                 <div class="project__stack">
                   <span class="chip chip--accent">SwiftUI</span>
                   <span class="chip">Firebase</span>
@@ -131,39 +156,39 @@
           <!-- Game / BoniStudio -->
           <article class="project project--game reveal">
             <div class="project__media" aria-hidden="true">
-              <span class="status-float">In development</span>
-              <span class="tag-float">Long Arc</span>
+              <span class="status-float" data-i18n="project.game.status">In development</span>
+              <span class="tag-float" data-i18n="project.game.tag">Long Arc</span>
               <div class="mark">BONI</div>
             </div>
 
             <div class="project__body">
               <div class="project__row">
-                <span>02 / Game</span>
+                <span data-i18n="project.game.row.a">02 / Game</span>
                 <span class="divider"></span>
-                <span>Ongoing</span>
+                <span data-i18n="project.game.row.b">Ongoing</span>
               </div>
-              <h3 class="project__title">BoniStudio — Original game direction.</h3>
-              <p class="project__summary">
+              <h3 class="project__title" data-i18n="project.game.title">BoniStudio — Original game direction.</h3>
+              <p class="project__summary" data-i18n="project.game.summary">
                 Long-horizon original game development under BoniStudio. A creative spine for everything else: original worlds, original mechanics, and the interactive systems I actually want to exist.
               </p>
 
               <div class="project__grid">
                 <div>
-                  <h4>Focus</h4>
+                  <h4 data-i18n="project.game.focus.h">Focus</h4>
                   <ul>
-                    <li>UE5 prototyping & interactive systems</li>
-                    <li>Worldbuilding direction and tone</li>
-                    <li>Mechanics, atmosphere, experimental loops</li>
+                    <li data-i18n="project.game.focus.1">UE5 prototyping & interactive systems</li>
+                    <li data-i18n="project.game.focus.2">Worldbuilding direction and tone</li>
+                    <li data-i18n="project.game.focus.3">Mechanics, atmosphere, experimental loops</li>
                   </ul>
                 </div>
                 <div>
-                  <h4>Why it matters</h4>
-                  <p>This is the long-term creative direction of the studio — the part that doesn't show up in a quarter, but defines what the rest of the decade looks like.</p>
+                  <h4 data-i18n="project.game.why.h">Why it matters</h4>
+                  <p data-i18n="project.game.why.p">This is the long-term creative direction of the studio — the part that doesn't show up in a quarter, but defines what the rest of the decade looks like.</p>
                 </div>
               </div>
 
               <div>
-                <h4 style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.22em; color:var(--text-3); text-transform:uppercase; margin-bottom:10px; font-weight:500;">Stack</h4>
+                <h4 style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.22em; color:var(--text-3); text-transform:uppercase; margin-bottom:10px; font-weight:500;" data-i18n="project.stack.h">Stack</h4>
                 <div class="project__stack">
                   <span class="chip chip--accent">Unreal Engine 5</span>
                   <span class="chip">Blueprints</span>
@@ -177,39 +202,39 @@
           <!-- AI / Automation / Evaluation -->
           <article class="project project--ai reveal">
             <div class="project__media" aria-hidden="true">
-              <span class="status-float">Applied</span>
-              <span class="tag-float">Methodology</span>
+              <span class="status-float" data-i18n="project.ai.status">Applied</span>
+              <span class="tag-float" data-i18n="project.ai.tag">Methodology</span>
               <div class="mark">AI ⇄</div>
             </div>
 
             <div class="project__body">
               <div class="project__row">
-                <span>03 / Method</span>
+                <span data-i18n="project.ai.row.a">03 / Method</span>
                 <span class="divider"></span>
-                <span>2023 — present</span>
+                <span data-i18n="project.ai.row.b">2023 — present</span>
               </div>
-              <h3 class="project__title">AI, Automation & Code Evaluation.</h3>
-              <p class="project__summary">
+              <h3 class="project__title" data-i18n="project.ai.title">AI, Automation & Code Evaluation.</h3>
+              <p class="project__summary" data-i18n="project.ai.summary">
                 Treating AI as an engineering multiplier, not a personality. Evaluation of model-generated code for correctness, reasoning quality, and real-world usability — plus developer-grade prompts embedded in real production workflows.
               </p>
 
               <div class="project__grid">
                 <div>
-                  <h4>What I do</h4>
+                  <h4 data-i18n="project.ai.do.h">What I do</h4>
                   <ul>
-                    <li>Evaluate AI-generated code for correctness, reasoning & hallucination risk</li>
-                    <li>Write developer-style prompts for debugging, architecture & edge cases</li>
-                    <li>Use ChatGPT and Cursor as production accelerators</li>
+                    <li data-i18n="project.ai.do.1">Evaluate AI-generated code for correctness, reasoning & hallucination risk</li>
+                    <li data-i18n="project.ai.do.2">Write developer-style prompts for debugging, architecture & edge cases</li>
+                    <li data-i18n="project.ai.do.3">Use ChatGPT and Cursor as production accelerators</li>
                   </ul>
                 </div>
                 <div>
-                  <h4>Why it matters</h4>
-                  <p>Anyone can use AI. Few can tell when it's wrong, why it's wrong, and how to engineer around it. That difference is the moat.</p>
+                  <h4 data-i18n="project.ai.why.h">Why it matters</h4>
+                  <p data-i18n="project.ai.why.p">Anyone can use AI. Few can tell when it's wrong, why it's wrong, and how to engineer around it. That difference is the moat.</p>
                 </div>
               </div>
 
               <div>
-                <h4 style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.22em; color:var(--text-3); text-transform:uppercase; margin-bottom:10px; font-weight:500;">Stack</h4>
+                <h4 style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.22em; color:var(--text-3); text-transform:uppercase; margin-bottom:10px; font-weight:500;" data-i18n="project.stack.h">Stack</h4>
                 <div class="project__stack">
                   <span class="chip chip--accent">LLM Evaluation</span>
                   <span class="chip">Prompt Engineering</span>
@@ -225,39 +250,39 @@
           <!-- PLUR -->
           <article class="project project--plur reveal">
             <div class="project__media" aria-hidden="true">
-              <span class="status-float">Archived signal</span>
-              <span class="tag-float">Early work</span>
+              <span class="status-float" data-i18n="project.plur.status">Archived signal</span>
+              <span class="tag-float" data-i18n="project.plur.tag">Early work</span>
               <div class="mark">PLUR</div>
             </div>
 
             <div class="project__body">
               <div class="project__row">
-                <span>04 / Early founder</span>
+                <span data-i18n="project.plur.row.a">04 / Early founder</span>
                 <span class="divider"></span>
-                <span>Prior</span>
+                <span data-i18n="project.plur.row.b">Prior</span>
               </div>
-              <h3 class="project__title">PLUR — Editorial for a music culture.</h3>
-              <p class="project__summary">
+              <h3 class="project__title" data-i18n="project.plur.title">PLUR — Editorial for a music culture.</h3>
+              <p class="project__summary" data-i18n="project.plur.summary">
                 An early editorial and content platform built around electronic music culture. A first clear signal of product instinct, internet fluency, and the appetite to actually ship things.
               </p>
 
               <div class="project__grid">
                 <div>
-                  <h4>What I built</h4>
+                  <h4 data-i18n="project.plur.built.h">What I built</h4>
                   <ul>
-                    <li>Content and editorial workflow for a live audience</li>
-                    <li>Basic web infrastructure & publishing pipeline</li>
-                    <li>Brand and product direction from the ground up</li>
+                    <li data-i18n="project.plur.built.1">Content and editorial workflow for a live audience</li>
+                    <li data-i18n="project.plur.built.2">Basic web infrastructure & publishing pipeline</li>
+                    <li data-i18n="project.plur.built.3">Brand and product direction from the ground up</li>
                   </ul>
                 </div>
                 <div>
-                  <h4>Why it matters</h4>
-                  <p>It predates the rest of this page — the early proof that I'd rather build a thing than talk about building one.</p>
+                  <h4 data-i18n="project.plur.why.h">Why it matters</h4>
+                  <p data-i18n="project.plur.why.p">It predates the rest of this page — the early proof that I'd rather build a thing than talk about building one.</p>
                 </div>
               </div>
 
               <div>
-                <h4 style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.22em; color:var(--text-3); text-transform:uppercase; margin-bottom:10px; font-weight:500;">Stack</h4>
+                <h4 style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.22em; color:var(--text-3); text-transform:uppercase; margin-bottom:10px; font-weight:500;" data-i18n="project.stack.h">Stack</h4>
                 <div class="project__stack">
                   <span class="chip">Editorial</span>
                   <span class="chip">Web Infra</span>
@@ -276,43 +301,43 @@
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <div class="eyebrow">Experience</div>
-            <h2>Production teams.<br/><span class="gradient-text">Real engineering workflow.</span></h2>
+            <div class="eyebrow" data-i18n="experience.eyebrow">Experience</div>
+            <h2 data-i18n-html="experience.title.html">Production teams.<br/><span class="gradient-text">Real engineering workflow.</span></h2>
           </div>
-          <p class="section-sub">
+          <p class="section-sub" data-i18n="experience.sub">
             Condensed from the full CV into the signal that matters: shipping features in real engineering organizations, async and in person.
           </p>
         </div>
 
         <div class="experience reveal-stagger">
           <div class="exp-item">
-            <div class="exp-item__date">2024 — 2025</div>
+            <div class="exp-item__date" data-i18n="exp.yx.date">2024 — 2025</div>
             <div class="exp-item__role">
-              <h3>Part-Time Software Development Engineer</h3>
-              <span class="company">Yuanxing Yueya</span>
+              <h3 data-i18n="exp.yx.role">Part-Time Software Development Engineer</h3>
+              <span class="company" data-i18n="exp.yx.company">Yuanxing Yueya</span>
             </div>
             <div class="exp-item__desc">
-              <p>Built and maintained full-stack features for production WeChat Mini Programs.</p>
+              <p data-i18n="exp.yx.p">Built and maintained full-stack features for production WeChat Mini Programs.</p>
               <ul>
-                <li>Shipped usability and performance improvements into live product surfaces</li>
-                <li>Owned end-to-end feature work from spec to deploy</li>
-                <li>Collaborated asynchronously across time zones with a distributed team</li>
+                <li data-i18n="exp.yx.1">Shipped usability and performance improvements into live product surfaces</li>
+                <li data-i18n="exp.yx.2">Owned end-to-end feature work from spec to deploy</li>
+                <li data-i18n="exp.yx.3">Collaborated asynchronously across time zones with a distributed team</li>
               </ul>
             </div>
           </div>
 
           <div class="exp-item">
-            <div class="exp-item__date">2023</div>
+            <div class="exp-item__date" data-i18n="exp.lv.date">2023</div>
             <div class="exp-item__role">
-              <h3>Software Engineer Intern</h3>
-              <span class="company">Lenovo</span>
+              <h3 data-i18n="exp.lv.role">Software Engineer Intern</h3>
+              <span class="company" data-i18n="exp.lv.company">Lenovo</span>
             </div>
             <div class="exp-item__desc">
-              <p>Contributed to feature work, debugging, testing, and code review inside an enterprise engineering workflow.</p>
+              <p data-i18n="exp.lv.p">Contributed to feature work, debugging, testing, and code review inside an enterprise engineering workflow.</p>
               <ul>
-                <li>Worked inside structured review and release processes at scale</li>
-                <li>Practiced disciplined debugging across a large existing codebase</li>
-                <li>Learned how real engineering orgs ship — and how to ship faster without breaking them</li>
+                <li data-i18n="exp.lv.1">Worked inside structured review and release processes at scale</li>
+                <li data-i18n="exp.lv.2">Practiced disciplined debugging across a large existing codebase</li>
+                <li data-i18n="exp.lv.3">Learned how real engineering orgs ship — and how to ship faster without breaking them</li>
               </ul>
             </div>
           </div>
@@ -325,10 +350,10 @@
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <div class="eyebrow">Capabilities</div>
-            <h2>Four stacks. One operator.</h2>
+            <div class="eyebrow" data-i18n="cap.eyebrow">Capabilities</div>
+            <h2 data-i18n="cap.title">Four stacks. One operator.</h2>
           </div>
-          <p class="section-sub">
+          <p class="section-sub" data-i18n="cap.sub">
             Not a laundry list. These are the four fronts I actively work across — and the tools I use to move quickly on each.
           </p>
         </div>
@@ -336,10 +361,10 @@
         <div class="cap-grid reveal-stagger">
           <div class="cap">
             <div class="cap__head">
-              <h3>Product Building</h3>
+              <h3 data-i18n="cap.1.title">Product Building</h3>
               <div class="cap__idx">01</div>
             </div>
-            <p class="muted" style="font-size:14px; line-height:1.6;">End-to-end ownership of the surface users actually see and feel.</p>
+            <p class="muted" style="font-size:14px; line-height:1.6;" data-i18n="cap.1.desc">End-to-end ownership of the surface users actually see and feel.</p>
             <div class="cap__chips">
               <span class="chip chip--accent">iOS / SwiftUI</span>
               <span class="chip">Product Design</span>
@@ -352,10 +377,10 @@
 
           <div class="cap">
             <div class="cap__head">
-              <h3>Full-Stack Development</h3>
+              <h3 data-i18n="cap.2.title">Full-Stack Development</h3>
               <div class="cap__idx">02</div>
             </div>
-            <p class="muted" style="font-size:14px; line-height:1.6;">Comfortable from database to pixel, picking the right tool for the job.</p>
+            <p class="muted" style="font-size:14px; line-height:1.6;" data-i18n="cap.2.desc">Comfortable from database to pixel, picking the right tool for the job.</p>
             <div class="cap__chips">
               <span class="chip chip--accent">TypeScript / JS</span>
               <span class="chip">Node.js</span>
@@ -369,10 +394,10 @@
 
           <div class="cap">
             <div class="cap__head">
-              <h3>AI-Assisted Engineering</h3>
+              <h3 data-i18n="cap.3.title">AI-Assisted Engineering</h3>
               <div class="cap__idx">03</div>
             </div>
-            <p class="muted" style="font-size:14px; line-height:1.6;">AI used as leverage across architecture, debugging, evaluation, and iteration.</p>
+            <p class="muted" style="font-size:14px; line-height:1.6;" data-i18n="cap.3.desc">AI used as leverage across architecture, debugging, evaluation, and iteration.</p>
             <div class="cap__chips">
               <span class="chip chip--accent">Prompt Engineering</span>
               <span class="chip">LLM Evaluation</span>
@@ -386,10 +411,10 @@
 
           <div class="cap">
             <div class="cap__head">
-              <h3>Game / Creative Tech</h3>
+              <h3 data-i18n="cap.4.title">Game / Creative Tech</h3>
               <div class="cap__idx">04</div>
             </div>
-            <p class="muted" style="font-size:14px; line-height:1.6;">Interactive systems, worldbuilding, and creative tools — the long arc.</p>
+            <p class="muted" style="font-size:14px; line-height:1.6;" data-i18n="cap.4.desc">Interactive systems, worldbuilding, and creative tools — the long arc.</p>
             <div class="cap__chips">
               <span class="chip chip--accent">Unreal Engine 5</span>
               <span class="chip">Blueprints</span>
@@ -408,34 +433,34 @@
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <div class="eyebrow">Now / 2026</div>
-            <h2>What I'm building this quarter.</h2>
+            <div class="eyebrow" data-i18n="now.eyebrow">Now / 2026</div>
+            <h2 data-i18n="now.title">What I'm building this quarter.</h2>
           </div>
-          <p class="section-sub">
+          <p class="section-sub" data-i18n="now.sub">
             This block updates as the work evolves — a living signal of where energy is actually going, not what I did a year ago.
           </p>
         </div>
 
         <div class="now-grid reveal-stagger">
           <div class="now-card">
-            <div class="now-card__tag">Active</div>
-            <h3>Growing OvO.</h3>
-            <p>Iterating the product, sharpening the editor experience, and figuring out the early distribution loops that actually work.</p>
+            <div class="now-card__tag" data-i18n="now.1.tag">Active</div>
+            <h3 data-i18n="now.1.title">Growing OvO.</h3>
+            <p data-i18n="now.1.desc">Iterating the product, sharpening the editor experience, and figuring out the early distribution loops that actually work.</p>
           </div>
           <div class="now-card">
-            <div class="now-card__tag">In motion</div>
-            <h3>Building future app / product lines.</h3>
-            <p>Designing the next wave of digital tools that can live alongside OvO — each one a fresh surface and a cleaner engine.</p>
+            <div class="now-card__tag" data-i18n="now.2.tag">In motion</div>
+            <h3 data-i18n="now.2.title">Building future app / product lines.</h3>
+            <p data-i18n="now.2.desc">Designing the next wave of digital tools that can live alongside OvO — each one a fresh surface and a cleaner engine.</p>
           </div>
           <div class="now-card">
-            <div class="now-card__tag">Long arc</div>
-            <h3>Game direction under BoniStudio.</h3>
-            <p>Prototyping mechanics and worldbuilding pieces for the original game line. Quiet work, compounding weekly.</p>
+            <div class="now-card__tag" data-i18n="now.3.tag">Long arc</div>
+            <h3 data-i18n="now.3.title">Game direction under BoniStudio.</h3>
+            <p data-i18n="now.3.desc">Prototyping mechanics and worldbuilding pieces for the original game line. Quiet work, compounding weekly.</p>
           </div>
           <div class="now-card">
-            <div class="now-card__tag">Infrastructure</div>
-            <h3>Expanding AI-assisted workflows.</h3>
-            <p>Sharpening the personal engineering stack — evaluation, prompting, and leverage loops that make everything else ship faster.</p>
+            <div class="now-card__tag" data-i18n="now.4.tag">Infrastructure</div>
+            <h3 data-i18n="now.4.title">Expanding AI-assisted workflows.</h3>
+            <p data-i18n="now.4.desc">Sharpening the personal engineering stack — evaluation, prompting, and leverage loops that make everything else ship faster.</p>
           </div>
         </div>
       </div>
@@ -446,17 +471,17 @@
       <div class="container">
         <div class="contact__inner">
           <div class="reveal">
-            <div class="eyebrow" style="margin-bottom:20px;">Contact</div>
-            <h2 class="gradient-text">Let's build something that lasts.</h2>
-            <p class="lead" style="margin-top:24px;">
+            <div class="eyebrow" style="margin-bottom:20px;" data-i18n="contact.eyebrow">Contact</div>
+            <h2 class="gradient-text" data-i18n="contact.title">Let's build something that lasts.</h2>
+            <p class="lead" style="margin-top:24px;" data-i18n="contact.lead">
               Open to: investment conversations, sponsorship, collaboration, and a small number of selected opportunities. If you've read this far, we should probably talk.
             </p>
             <div class="cta__actions" style="margin-top:28px;">
               <a class="btn btn-primary btn-lg" href="mailto:hello@bonistudio.dev">
-                Email me
+                <span data-i18n="contact.cta.email">Email me</span>
                 <span class="arrow" aria-hidden="true">→</span>
               </a>
-              <a class="btn btn-ghost btn-lg" href="mailto:hello@bonistudio.dev?subject=Sponsor%20the%20Journey">
+              <a class="btn btn-ghost btn-lg" href="mailto:hello@bonistudio.dev?subject=Sponsor%20the%20Journey" data-i18n="contact.cta.sponsor">
                 Sponsor the Journey
               </a>
             </div>
@@ -465,19 +490,23 @@
           <div class="contact__list reveal">
             <a href="mailto:hello@bonistudio.dev">
               hello@bonistudio.dev
-              <span>Email</span>
+              <span data-i18n="contact.list.email.primary.label">Email / Primary</span>
+            </a>
+            <a href="mailto:bonistudio.core@gmail.com">
+              bonistudio.core@gmail.com
+              <span data-i18n="contact.list.email.alternate.label">Email / Alternate</span>
             </a>
             <a href="https://github.com/BoniStudio" target="_blank" rel="noopener">
               github.com/BoniStudio
-              <span>GitHub</span>
+              <span data-i18n="contact.list.github.label">GitHub</span>
             </a>
             <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
               linkedin / ace-chen
-              <span>LinkedIn</span>
+              <span data-i18n="contact.list.linkedin.label">LinkedIn</span>
             </a>
             <a href="#" aria-disabled="true" onclick="return false;">
-              discord — on request
-              <span>Discord</span>
+              <span data-i18n="contact.list.discord.text">discord — on request</span>
+              <span data-i18n="contact.list.discord.label">Discord</span>
             </a>
           </div>
         </div>
@@ -487,15 +516,16 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <div>© <span data-year>2026</span> Ace Chen / BoniStudio. This is not the end — it's the beginning.</div>
+      <div data-i18n-template="footer.work.copy">© <span data-year>2026</span> Ace Chen / BoniStudio. This is not the end — it's the beginning.</div>
       <div>
-        <a href="index.html">Home</a> &nbsp;·&nbsp;
-        <a href="#contact">Contact</a> &nbsp;·&nbsp;
-        <a href="#" aria-label="Top of page" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Top ↑</a>
+        <a href="index.html" data-i18n="footer.home">Home</a> &nbsp;·&nbsp;
+        <a href="#contact" data-i18n="footer.contact">Contact</a> &nbsp;·&nbsp;
+        <a href="#" aria-label="Top of page" data-i18n="footer.top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Top ↑</a>
       </div>
     </div>
   </footer>
 
+  <script src="translations.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>

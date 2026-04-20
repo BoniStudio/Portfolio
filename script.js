@@ -1,12 +1,105 @@
 /* =========================================================
    Ace Chen — Portfolio interactions
-   Nav, reveal, hero canvas, hover parallax, narrative progress
+   i18n · nav · reveal · hero canvas · parallax · narrative
    ========================================================= */
 
 (() => {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- Navigation: scroll state + mobile toggle ---------- */
+  /* =====================================================
+     i18n — EN / 中文
+     ===================================================== */
+  const I18N_KEY = 'ace_lang';
+  const SUPPORTED = ['en', 'zh'];
+  const DEFAULT_LANG = 'en';
+
+  const getLang = () => {
+    let stored = null;
+    try { stored = localStorage.getItem(I18N_KEY); } catch (_) {}
+    return SUPPORTED.includes(stored) ? stored : DEFAULT_LANG;
+  };
+
+  const tr = (key, lang) => {
+    const dict = (window.TRANSLATIONS && window.TRANSLATIONS[lang]) || {};
+    const fb = (window.TRANSLATIONS && window.TRANSLATIONS.en) || {};
+    if (key in dict) return dict[key];
+    if (key in fb) return fb[key];
+    return '';
+  };
+
+  const applyLang = (lang) => {
+    if (!SUPPORTED.includes(lang)) lang = DEFAULT_LANG;
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+    document.documentElement.setAttribute('data-lang', lang);
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      el.textContent = tr(key, lang);
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      el.innerHTML = tr(key, lang);
+    });
+
+    document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+      const spec = el.getAttribute('data-i18n-attr');
+      spec.split(',').forEach(pair => {
+        const idx = pair.indexOf(':');
+        if (idx === -1) return;
+        const attr = pair.slice(0, idx).trim();
+        const key = pair.slice(idx + 1).trim();
+        if (attr && key) el.setAttribute(attr, tr(key, lang));
+      });
+    });
+
+    const page = document.body.getAttribute('data-page');
+    if (page) {
+      const tKey = `page.${page}.title`;
+      const dKey = `page.${page}.desc`;
+      const tVal = tr(tKey, lang);
+      if (tVal) document.title = tVal;
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) meta.setAttribute('content', tr(dKey, lang));
+    }
+
+    const year = new Date().getFullYear();
+    document.querySelectorAll('[data-i18n-template]').forEach(el => {
+      const key = el.getAttribute('data-i18n-template');
+      const raw = tr(key, lang);
+      el.textContent = raw.replace('{year}', year);
+    });
+
+    document.querySelectorAll('[data-lang-toggle] [data-lang]').forEach(el => {
+      el.classList.toggle('is-active', el.getAttribute('data-lang') === lang);
+    });
+  };
+
+  const setLang = (lang) => {
+    try { localStorage.setItem(I18N_KEY, lang); } catch (_) {}
+    applyLang(lang);
+  };
+
+  applyLang(getLang());
+
+  document.querySelectorAll('[data-lang-toggle]').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      const clicked = e.target.closest('[data-lang]');
+      const current = getLang();
+      let next;
+      if (clicked) {
+        next = clicked.getAttribute('data-lang');
+        if (next === current) return;
+      } else {
+        next = current === 'en' ? 'zh' : 'en';
+      }
+      setLang(next);
+    });
+  });
+
+  /* =====================================================
+     Navigation: scroll state + mobile toggle
+     ===================================================== */
   const nav = document.querySelector('[data-nav]');
   if (nav) {
     const setScrolled = () => {
@@ -26,7 +119,9 @@
     }
   }
 
-  /* ---------- Reveal-on-scroll ---------- */
+  /* =====================================================
+     Reveal on scroll
+     ===================================================== */
   const revealTargets = document.querySelectorAll('.reveal, .reveal-stagger');
   if ('IntersectionObserver' in window && revealTargets.length) {
     const io = new IntersectionObserver((entries) => {
@@ -42,7 +137,9 @@
     revealTargets.forEach(el => el.classList.add('is-visible'));
   }
 
-  /* ---------- Hero canvas: subtle drifting particle grid ---------- */
+  /* =====================================================
+     Hero canvas: drifting particle grid
+     ===================================================== */
   const canvas = document.querySelector('[data-hero-canvas]');
   if (canvas && !prefersReduced) {
     const ctx = canvas.getContext('2d');
@@ -74,8 +171,6 @@
 
     const step = () => {
       ctx.clearRect(0, 0, w, h);
-
-      // connect near particles
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
         p.x += p.vx; p.y += p.vy;
@@ -84,25 +179,21 @@
         if (p.y < -10) p.y = h + 10;
         if (p.y > h + 10) p.y = -10;
 
-        // mouse attraction (subtle)
         const dx = mouse.x - p.x, dy = mouse.y - p.y;
         const dist2 = dx*dx + dy*dy;
         if (dist2 < 20000) {
           const f = 0.0005;
           p.vx += dx * f;
           p.vy += dy * f;
-          // damp
           p.vx *= 0.98;
           p.vy *= 0.98;
         }
 
-        // draw particle
         ctx.beginPath();
         ctx.fillStyle = `rgba(200, 255, 190, ${p.a})`;
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
 
-        // connect
         for (let j = i + 1; j < particles.length; j++) {
           const q = particles[j];
           const ddx = p.x - q.x, ddy = p.y - q.y;
@@ -118,7 +209,6 @@
           }
         }
       }
-
       animId = requestAnimationFrame(step);
     };
 
@@ -141,7 +231,9 @@
     });
   }
 
-  /* ---------- Hero glow parallax ---------- */
+  /* =====================================================
+     Hero glow parallax
+     ===================================================== */
   const hero = document.querySelector('[data-hero]');
   if (hero && !prefersReduced) {
     const glows = hero.querySelectorAll('.hero__glow');
@@ -156,7 +248,9 @@
     });
   }
 
-  /* ---------- Narrative progress ---------- */
+  /* =====================================================
+     Narrative progress bar (fixed)
+     ===================================================== */
   const narrative = document.querySelector('[data-narrative]');
   if (narrative) {
     const progress = narrative.querySelector('.narrative__progress');
@@ -176,9 +270,10 @@
     onScroll();
   }
 
-  /* ---------- Pillar / Project hover light ---------- */
-  const hoverLights = document.querySelectorAll('.pillar, .project');
-  hoverLights.forEach(el => {
+  /* =====================================================
+     Pillar / project hover light
+     ===================================================== */
+  document.querySelectorAll('.pillar, .project').forEach(el => {
     el.addEventListener('mousemove', (e) => {
       const rect = el.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -188,7 +283,9 @@
     });
   });
 
-  /* ---------- Smooth anchor scroll with nav offset ---------- */
+  /* =====================================================
+     Smooth anchor scroll with nav offset
+     ===================================================== */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     const id = a.getAttribute('href');
     if (!id || id === '#' || id.length < 2) return;
@@ -201,8 +298,32 @@
     });
   });
 
-  /* ---------- Year in footer ---------- */
+  /* =====================================================
+     Year injection
+     ===================================================== */
   document.querySelectorAll('[data-year]').forEach(el => {
     el.textContent = new Date().getFullYear();
   });
+
+  /* =====================================================
+     Home-only: gentle parallax for stage glows
+     ===================================================== */
+  const stage = document.querySelector('[data-page-stage]');
+  if (stage && !prefersReduced) {
+    const layers = stage.querySelectorAll('[data-parallax]');
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        layers.forEach(layer => {
+          const speed = parseFloat(layer.getAttribute('data-parallax')) || 0.1;
+          layer.style.transform = `translate3d(0, ${y * speed}px, 0)`;
+        });
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
 })();
